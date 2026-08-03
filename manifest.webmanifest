@@ -1,0 +1,16 @@
+{
+  "name": "QuranCrest Academy",
+  "short_name": "QuranCrest",
+  "description": "Online Quran Classes for Kids & Adults in the United States",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F0",
+  "theme_color": "#0B1F33",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="QuranCrest Favicon">
+  <rect width="64" height="64" rx="16" fill="#0B1F33" />
+  <g transform="translate(2, 4)">
+    <path d="M 12 36 C 12 20, 24 10, 30 10 C 36 10, 48 20, 48 36 C 40 24, 34 20, 30 20 C 26 20, 20 24, 12 36 Z" fill="#C8A96B" />
+    <path d="M 16 44 C 23 40, 29 42, 30 46 L 30 26 C 28 23, 22 21, 16 25 Z" fill="#0F766E" />
+    <path d="M 44 44 C 37 40, 31 42, 30 46 L 30 26 C 32 23, 38 21, 44 25 Z" fill="#FAF7F0" />
+    <path d="M 24 49 L 30 44 L 36 49 L 30 46 Z" fill="#C8A96B" />
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" role="img" aria-label="QuranCrest Academy Logo">
+  <defs>
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="100%" stop-color="#0B5F59" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C8A96B" />
+      <stop offset="100%" stop-color="#E2C889" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon Mark -->
+  <g transform="translate(10, 8)">
+    <!-- Rising Crest Arc -->
+    <path d="M 4 28 C 4 12, 18 2, 30 2 C 42 2, 56 12, 56 28 C 46 16, 38 12, 30 12 C 22 12, 14 16, 4 28 Z" fill="url(#goldGrad)" opacity="0.9" />
+    
+    <!-- Left Book Page -->
+    <path d="M 12 36 C 20 32, 28 34, 30 38 L 30 18 C 28 15, 20 13, 12 17 Z" fill="url(#crestGrad)" />
+    
+    <!-- Right Book Page -->
+    <path d="M 48 36 C 40 32, 32 34, 30 38 L 30 18 C 32 15, 40 13, 48 17 Z" fill="#0B1F33" />
+    
+    <!-- Book Base / Stand Accent -->
+    <path d="M 22 41 L 30 36 L 38 41 L 30 38 Z" fill="#C8A96B" />
+  </g>
+
+  <!-- Typography -->
+  <text x="74" y="32" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="21" fill="#0B1F33" letter-spacing="-0.5">QuranCrest</text>
+  <text x="74" y="47" font-family="Inter, system-ui, sans-serif" font-weight="600" font-size="11" fill="#0F766E" letter-spacing="1.5">ACADEMY</text>
+</svg>

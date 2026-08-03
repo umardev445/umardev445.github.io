@@ -1,0 +1,11 @@
+{
+  "name": "qurancrest-academy",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Fast, mobile-first static website for QuranCrest Academy.",
+  "scripts": {
+    "dev": "node server.mjs",
+    "check": "node --check assets/js/config.js && node --check assets/js/main.js && node --check assets/js/form.js"
+  }
+}
