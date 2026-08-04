@@ -1,66 +1,910 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Quran Classes for Kids & Adults in the USA | QuranCrest Academy</title>
-  <meta name="description" content="Learn Quran online through live one-to-one lessons with male & female tutors, flexible US time zones, and personalized learning plans. Book a free assessment today.">
-  <meta name="theme-color" content="#071827">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Online Quran Classes for Kids &amp; Adults in the USA | QuranCrest Academy</title>
+  <meta name="description" content="Live one-to-one online Quran classes for kids and adults with male and female tutor options, flexible US timings, and personalized learning plans. Book a free assessment.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#071b2e">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="QuranCrest Academy">
-  <meta property="og:title" content="Online Quran Classes for Kids & Adults in the USA">
-  <meta property="og:description" content="Live one-to-one Quran lessons, flexible US timings, and a free assessment for kids and adults.">
+  <meta property="og:title" content="Online Quran Classes for Kids &amp; Adults in the USA">
+  <meta property="og:description" content="Personal one-to-one Quran lessons, flexible US timings, and a free assessment with no card required.">
   <meta property="og:url" content="https://qurancrest.com/">
   <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://qurancrest.com/">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="preload" href="/assets/images/logo.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="/assets/images/hero-illustration.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <style>
+    /* QuranCrest homepage layer — self-contained, mobile-first and fast. */
+    :root {
+      --qc-navy-950: #051522;
+      --qc-navy-900: #071b2e;
+      --qc-navy-800: #0b2941;
+      --qc-emerald-700: #0b665f;
+      --qc-emerald-600: #0f766e;
+      --qc-emerald-500: #16958a;
+      --qc-mint-100: #dff4ef;
+      --qc-mint-50: #effaf7;
+      --qc-gold-500: #c8a96b;
+      --qc-gold-200: #ead9b6;
+      --qc-ivory: #fbf8f1;
+      --qc-surface: #ffffff;
+      --qc-slate-700: #344255;
+      --qc-slate-600: #526176;
+      --qc-slate-400: #91a0b2;
+      --qc-line: #dfe6ec;
+      --qc-shadow-sm: 0 8px 24px rgba(5, 21, 34, .07);
+      --qc-shadow-md: 0 18px 48px rgba(5, 21, 34, .11);
+      --qc-shadow-lg: 0 30px 80px rgba(5, 21, 34, .16);
+      --qc-radius-sm: 12px;
+      --qc-radius-md: 18px;
+      --qc-radius-lg: 28px;
+      --qc-ease: cubic-bezier(.2, .75, .25, 1);
+    }
+
+    html { scroll-padding-top: 118px; }
+    body { background: var(--qc-surface); color: var(--qc-navy-900); padding-bottom: 74px; }
+    img, svg { max-width: 100%; }
+    a { text-underline-offset: 3px; }
+    .container { max-width: 1240px; }
+    .home-main { overflow: clip; }
+    .home-main p { color: var(--qc-slate-600); }
+    .home-main h1,
+    .home-main h2,
+    .home-main h3 { color: var(--qc-navy-900); }
+
+    .home-section {
+      position: relative;
+      padding: 76px 0;
+    }
+
+    .home-section--soft { background: var(--qc-ivory); }
+    .home-section--mint { background: var(--qc-mint-50); }
+
+    .home-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      color: var(--qc-emerald-700);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .11em;
+      line-height: 1.3;
+      text-transform: uppercase;
+    }
+
+    .home-kicker::before {
+      width: 28px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--qc-gold-500);
+      content: "";
+    }
+
+    .home-heading {
+      max-width: 740px;
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 850;
+      letter-spacing: -.045em;
+      line-height: 1.04;
+      text-wrap: balance;
+    }
+
+    .home-heading em {
+      color: var(--qc-emerald-600);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 600;
+    }
+
+    .home-lead {
+      max-width: 670px;
+      margin: 18px 0 0;
+      font-size: clamp(1rem, 2.2vw, 1.13rem);
+      line-height: 1.75;
+    }
+
+    .home-section-head { margin-bottom: 34px; }
+    .home-section-head--center { text-align: center; }
+    .home-section-head--center .home-heading,
+    .home-section-head--center .home-lead { margin-left: auto; margin-right: auto; }
+
+    .home-arrow-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--qc-emerald-700);
+      font-size: .92rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .home-arrow-link svg { width: 17px; transition: transform .2s var(--qc-ease); }
+    .home-arrow-link:hover svg { transform: translateX(4px); }
+
+    /* Announcement and navigation */
+    .announcement-bar {
+      position: relative;
+      z-index: 102;
+      min-height: 38px;
+      background: var(--qc-navy-950);
+      color: #fff;
+      border: 0;
+    }
+
+    .announcement-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 38px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      text-align: center;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+
+    .announcement-badge {
+      display: none;
+      margin-right: 8px;
+      color: var(--qc-gold-200);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      min-height: 70px;
+      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid rgba(11, 41, 65, .08);
+      box-shadow: none;
+      backdrop-filter: blur(14px);
+      transition: box-shadow .25s ease, background-color .25s ease;
+    }
+
+    .site-header.is-scrolled { box-shadow: 0 12px 30px rgba(5, 21, 34, .08); }
+    .header-inner { min-height: 70px; }
+    .brand-logo img { width: 184px; height: auto; display: block; }
+
+    .hamburger-toggle {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--qc-line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .nav-link {
+      color: var(--qc-navy-800);
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .nav-link.active,
+    .nav-link:hover { color: var(--qc-emerald-600); }
+    .header-actions .btn { min-height: 44px; padding: .72rem 1.15rem; border-radius: 12px; font-size: .9rem; }
+
+    /* Hero */
+    .home-hero {
+      position: relative;
+      isolation: isolate;
+      padding: 46px 0 42px;
+      background:
+        radial-gradient(circle at 95% 8%, rgba(22, 149, 138, .14), transparent 33%),
+        radial-gradient(circle at 4% 94%, rgba(200, 169, 107, .13), transparent 28%),
+        linear-gradient(135deg, #ffffff 0%, #fbf9f3 56%, #f4fbf9 100%);
+    }
+
+    .home-hero::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: .36;
+      background-image:
+        linear-gradient(rgba(11, 41, 65, .045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(11, 41, 65, .045) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, #000, transparent 86%);
+      content: "";
+    }
+
+    .home-hero-grid {
+      display: grid;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .home-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      max-width: 100%;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      color: var(--qc-emerald-700);
+      background: rgba(255, 255, 255, .82);
+      border: 1px solid rgba(15, 118, 110, .2);
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(5, 21, 34, .05);
+      font-size: .74rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .home-eyebrow-dot {
+      flex: 0 0 auto;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--qc-emerald-500);
+      box-shadow: 0 0 0 5px rgba(22, 149, 138, .11);
+    }
+
+    .home-hero-title {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(2.55rem, 11vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -.062em;
+      line-height: .99;
+      text-wrap: balance;
+    }
+
+    .home-hero-title span {
+      position: relative;
+      display: inline-block;
+      isolation: isolate;
+      color: var(--qc-emerald-600);
+    }
+
+    .home-hero-title span::after {
+      position: absolute;
+      right: 0;
+      bottom: -3px;
+      left: 0;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--qc-gold-200);
+      opacity: .75;
+      transform: rotate(-1.5deg);
+      z-index: -1;
+      content: "";
+    }
+
+    @keyframes home-rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes home-panel-enter {
+      from { opacity: 0; transform: translateY(22px) scale(.985); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .js .home-hero-content > * { animation: home-rise .68s var(--qc-ease) both; }
+    .js .home-hero-content > *:nth-child(2) { animation-delay: .06s; }
+    .js .home-hero-content > *:nth-child(3) { animation-delay: .12s; }
+    .js .home-hero-content > *:nth-child(4) { animation-delay: .18s; }
+    .js .home-hero-content > *:nth-child(5) { animation-delay: .23s; }
+    .js .home-hero-content > *:nth-child(6) { animation-delay: .28s; }
+    .js .home-classroom-shell { animation: home-panel-enter .82s var(--qc-ease) .16s both; }
+
+    .home-hero-copy {
+      max-width: 660px;
+      margin: 22px 0 0;
+      color: var(--qc-slate-600);
+      font-size: clamp(1.02rem, 2.4vw, 1.2rem);
+      line-height: 1.72;
+    }
+
+    .home-hero-actions {
+      display: grid;
+      gap: 11px;
+      margin-top: 26px;
+    }
+
+    .home-main .btn {
+      min-height: 50px;
+      border-radius: 13px;
+      font-weight: 800;
+    }
+
+    .home-main .btn-primary,
+    .header-actions .btn-primary {
+      background: var(--qc-emerald-600);
+      border-color: var(--qc-emerald-600);
+      box-shadow: 0 10px 24px rgba(15, 118, 110, .2);
+    }
+
+    .home-main .btn-primary:hover,
+    .header-actions .btn-primary:hover {
+      background: var(--qc-emerald-500);
+      border-color: var(--qc-emerald-500);
+      box-shadow: 0 14px 30px rgba(15, 118, 110, .28);
+    }
+
+    .home-btn-quiet {
+      background: rgba(255, 255, 255, .82);
+      color: var(--qc-navy-900);
+      border: 1px solid rgba(11, 41, 65, .16);
+      box-shadow: 0 8px 22px rgba(5, 21, 34, .04);
+    }
+
+    .home-btn-quiet:hover { background: #fff; border-color: var(--qc-emerald-600); color: var(--qc-emerald-700); }
+
+    .home-reassurance {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin: 16px 0 0;
+      color: var(--qc-slate-600);
+      font-size: .78rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .home-reassurance svg { flex: 0 0 17px; margin-top: 2px; color: var(--qc-emerald-600); }
+
+    .home-hero-proof {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 14px;
+      margin-top: 28px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(11, 41, 65, .11);
+    }
+
+    .home-proof-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--qc-navy-800);
+      font-size: .78rem;
+      font-weight: 750;
+      line-height: 1.35;
+    }
+
+    .home-proof-item svg { flex: 0 0 17px; color: var(--qc-emerald-600); }
+
+    .home-classroom {
+      position: relative;
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 10px;
+      background: rgba(255, 255, 255, .74);
+      border: 1px solid rgba(11, 41, 65, .12);
+      border-radius: 28px;
+      box-shadow: var(--qc-shadow-lg);
+      backdrop-filter: blur(10px);
+    }
+
+    .home-classroom-shell {
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--qc-navy-900), var(--qc-navy-800));
+      border-radius: 21px;
+    }
+
+    .home-classroom-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 48px;
+      padding: 10px 14px;
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    .home-live-label { display: flex; align-items: center; gap: 8px; font-size: .72rem; font-weight: 800; }
+    .home-live-label::before { width: 7px; height: 7px; border-radius: 50%; background: #3ed6aa; box-shadow: 0 0 0 5px rgba(62, 214, 170, .12); content: ""; }
+    .home-classroom-time { color: rgba(255, 255, 255, .68); font-size: .69rem; font-weight: 700; }
+
+    .home-classroom-screen {
+      position: relative;
+      min-height: 250px;
+      padding: 18px;
+      background:
+        radial-gradient(circle at 100% 100%, rgba(200, 169, 107, .15), transparent 42%),
+        linear-gradient(145deg, #0c2b43, #071b2e);
+    }
+
+    .home-classroom-screen img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 215px;
+      object-fit: contain;
+      filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .22));
+    }
+
+    .home-lesson-note {
+      position: absolute;
+      right: 13px;
+      bottom: 13px;
+      width: min(200px, 58%);
+      padding: 11px 12px;
+      background: rgba(255, 255, 255, .94);
+      border: 1px solid rgba(255, 255, 255, .9);
+      border-radius: 13px;
+      box-shadow: var(--qc-shadow-md);
+    }
+
+    .home-lesson-note b { display: block; color: var(--qc-navy-900); font-size: .72rem; }
+    .home-lesson-note span { display: block; margin-top: 3px; color: var(--qc-slate-600); font-size: .66rem; line-height: 1.4; }
+
+    .home-classroom-footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      padding: 11px;
+      background: #fff;
+    }
+
+    .home-classroom-stat { padding: 8px 6px; text-align: center; background: #f7f9fa; border-radius: 10px; }
+    .home-classroom-stat strong { display: block; color: var(--qc-navy-900); font-size: .68rem; }
+    .home-classroom-stat span { display: block; margin-top: 2px; color: var(--qc-slate-600); font-size: .6rem; }
+
+    /* Trust ribbon */
+    .home-trust-ribbon {
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      border-top: 1px solid rgba(11, 41, 65, .08);
+      border-bottom: 1px solid rgba(11, 41, 65, .08);
+    }
+
+    .home-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-height: 102px;
+      padding: 15px 8px;
+      text-align: center;
+      border-right: 1px solid rgba(11, 41, 65, .08);
+      border-bottom: 1px solid rgba(11, 41, 65, .08);
+    }
+
+    .home-trust-item:nth-child(2n) { border-right: 0; }
+    .home-trust-item:nth-last-child(-n+2) { border-bottom: 0; }
+    .home-trust-icon { display: grid; width: 34px; height: 34px; place-items: center; color: var(--qc-emerald-700); background: var(--qc-mint-50); border-radius: 10px; }
+    .home-trust-icon svg { width: 18px; }
+    .home-trust-item strong { color: var(--qc-navy-900); font-size: .76rem; line-height: 1.25; }
+
+    /* Audience */
+    .home-audience-grid { display: grid; gap: 15px; }
+    .home-audience-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      padding: 28px 24px;
+      border: 1px solid var(--qc-line);
+      border-radius: var(--qc-radius-lg);
+      box-shadow: var(--qc-shadow-sm);
+    }
+
+    .home-audience-card--kids { background: linear-gradient(150deg, #f3fbf8 0%, #fff 74%); }
+    .home-audience-card--adults { background: linear-gradient(150deg, #fdf9f1 0%, #fff 74%); }
+    .home-audience-card::after { position: absolute; top: -72px; right: -62px; width: 190px; height: 190px; border: 1px solid rgba(15, 118, 110, .13); border-radius: 50%; box-shadow: 0 0 0 24px rgba(15, 118, 110, .035), 0 0 0 50px rgba(15, 118, 110, .025); content: ""; }
+    .home-audience-card--adults::after { border-color: rgba(200, 169, 107, .2); box-shadow: 0 0 0 24px rgba(200, 169, 107, .05), 0 0 0 50px rgba(200, 169, 107, .03); }
+    .home-audience-icon { display: grid; width: 52px; height: 52px; margin-bottom: 34px; place-items: center; color: var(--qc-emerald-700); background: #fff; border: 1px solid rgba(15, 118, 110, .13); border-radius: 15px; box-shadow: var(--qc-shadow-sm); }
+    .home-audience-card--adults .home-audience-icon { color: #876f3f; border-color: rgba(200, 169, 107, .25); }
+    .home-audience-icon svg { width: 25px; }
+    .home-audience-card h3 { margin: 0; font-size: 1.55rem; letter-spacing: -.035em; }
+    .home-audience-card p { margin: 12px 0 18px; font-size: .95rem; line-height: 1.7; }
+    .home-mini-list { display: grid; gap: 9px; margin: 0 0 22px; padding: 0; list-style: none; }
+    .home-mini-list li { display: flex; align-items: flex-start; gap: 9px; color: var(--qc-slate-700); font-size: .83rem; font-weight: 650; }
+    .home-mini-list svg { flex: 0 0 16px; margin-top: 2px; color: var(--qc-emerald-600); }
+
+    /* Programs */
+    .home-program-grid { display: grid; gap: 14px; }
+    .home-program-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid var(--qc-line);
+      border-radius: var(--qc-radius-md);
+      box-shadow: 0 5px 20px rgba(5, 21, 34, .045);
+      transition: transform .25s var(--qc-ease), box-shadow .25s var(--qc-ease), border-color .25s ease;
+    }
+
+    .home-program-card:hover { transform: translateY(-5px); border-color: rgba(15, 118, 110, .26); box-shadow: var(--qc-shadow-md); }
+    .home-program-card--featured { background: linear-gradient(150deg, var(--qc-navy-900), #0b334d); border-color: transparent; }
+    .home-program-card--featured h3,
+    .home-program-card--featured .home-program-index { color: #fff; }
+    .home-program-card--featured p { color: rgba(255, 255, 255, .72); }
+    .home-program-card--featured .home-arrow-link { color: #8fe0d6; }
+    .home-program-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 32px; }
+    .home-program-icon { display: grid; width: 45px; height: 45px; place-items: center; color: var(--qc-emerald-700); background: var(--qc-mint-50); border-radius: 13px; }
+    .home-program-card--featured .home-program-icon { color: #9ce7dd; background: rgba(255, 255, 255, .1); }
+    .home-program-icon svg { width: 22px; }
+    .home-program-index { color: var(--qc-slate-400); font-size: .7rem; font-weight: 900; letter-spacing: .12em; }
+    .home-program-card h3 { margin: 0; font-size: 1.25rem; letter-spacing: -.025em; }
+    .home-program-card p { margin: 10px 0 24px; font-size: .88rem; line-height: 1.65; }
+    .home-program-card .home-arrow-link { margin-top: auto; }
+
+    /* Live lesson experience */
+    .home-experience {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      background: var(--qc-navy-950);
+    }
+
+    .home-experience::before { position: absolute; top: -220px; right: -180px; width: 520px; height: 520px; border: 1px solid rgba(200, 169, 107, .12); border-radius: 50%; box-shadow: 0 0 0 55px rgba(200, 169, 107, .025), 0 0 0 110px rgba(200, 169, 107, .018); content: ""; }
+    .home-experience-grid { display: grid; gap: 34px; align-items: center; }
+    .home-experience .home-kicker { color: #8fe0d6; }
+    .home-experience .home-heading { color: #fff; }
+    .home-experience .home-lead { color: rgba(255, 255, 255, .67); }
+    .home-experience-list { display: grid; gap: 14px; margin: 26px 0 0; padding: 0; list-style: none; }
+    .home-experience-list li { display: flex; gap: 13px; color: rgba(255, 255, 255, .83); font-size: .9rem; line-height: 1.55; }
+    .home-experience-list b { display: block; margin-bottom: 2px; color: #fff; }
+    .home-experience-list svg { flex: 0 0 21px; margin-top: 2px; color: #78d4c8; }
+
+    .home-lesson-board {
+      position: relative;
+      padding: 23px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: var(--qc-radius-lg);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, .24);
+      backdrop-filter: blur(8px);
+    }
+
+    .home-lesson-board-head { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-bottom: 17px; border-bottom: 1px solid rgba(255, 255, 255, .12); }
+    .home-lesson-board-title { display: flex; align-items: center; gap: 10px; color: #fff; font-size: .86rem; font-weight: 800; }
+    .home-lesson-board-title span { display: grid; width: 34px; height: 34px; place-items: center; color: #9ce7dd; background: rgba(22, 149, 138, .15); border-radius: 10px; }
+    .home-lesson-board-title svg { width: 18px; }
+    .home-lesson-board-head > span { color: rgba(255, 255, 255, .45); font-size: .68rem; }
+    .home-lesson-timeline { display: grid; gap: 0; margin-top: 8px; }
+    .home-lesson-row { display: grid; grid-template-columns: 47px 24px 1fr; gap: 9px; align-items: center; min-height: 66px; }
+    .home-lesson-time { color: rgba(255, 255, 255, .46); font-size: .68rem; font-weight: 700; }
+    .home-lesson-dot { position: relative; display: grid; width: 24px; height: 24px; place-items: center; color: #8fe0d6; background: rgba(22, 149, 138, .13); border: 1px solid rgba(143, 224, 214, .2); border-radius: 50%; }
+    .home-lesson-row:not(:last-child) .home-lesson-dot::after { position: absolute; top: 23px; width: 1px; height: 43px; background: rgba(255, 255, 255, .13); content: ""; }
+    .home-lesson-dot svg { width: 12px; }
+    .home-lesson-row strong { display: block; color: #fff; font-size: .8rem; }
+    .home-lesson-row p { margin: 3px 0 0; color: rgba(255, 255, 255, .52); font-size: .7rem; line-height: 1.45; }
+
+    /* Steps */
+    .home-steps { display: grid; gap: 16px; counter-reset: steps; }
+    .home-step {
+      position: relative;
+      min-height: 240px;
+      padding: 27px 24px 23px;
+      background: #fff;
+      border: 1px solid var(--qc-line);
+      border-radius: var(--qc-radius-md);
+      box-shadow: var(--qc-shadow-sm);
+      counter-increment: steps;
+    }
+
+    .home-step::after { position: absolute; right: 20px; bottom: 8px; color: rgba(11, 41, 65, .045); font-size: 5.5rem; font-weight: 900; line-height: 1; content: "0" counter(steps); }
+    .home-step-number { display: grid; width: 38px; height: 38px; margin-bottom: 38px; place-items: center; color: #fff; background: var(--qc-emerald-600); border-radius: 50%; box-shadow: 0 0 0 7px var(--qc-mint-50); font-size: .8rem; font-weight: 900; }
+    .home-step h3 { position: relative; z-index: 1; margin: 0; font-size: 1.18rem; }
+    .home-step p { position: relative; z-index: 1; margin: 9px 0 0; font-size: .86rem; line-height: 1.65; }
+
+    /* Benefits / pathway */
+    .home-benefit-grid { display: grid; gap: 12px; }
+    .home-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px;
+      background: #fff;
+      border: 1px solid var(--qc-line);
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(5, 21, 34, .035);
+    }
+
+    .home-benefit-icon { display: grid; flex: 0 0 38px; height: 38px; place-items: center; color: var(--qc-emerald-700); background: var(--qc-mint-50); border-radius: 11px; }
+    .home-benefit-icon svg { width: 18px; }
+    .home-benefit h3 { margin: 0; font-size: .93rem; }
+    .home-benefit p { margin: 5px 0 0; font-size: .78rem; line-height: 1.55; }
+
+    .home-pathway {
+      margin-top: 28px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid var(--qc-line);
+      border-radius: var(--qc-radius-lg);
+      box-shadow: var(--qc-shadow-sm);
+    }
+
+    .home-pathway img { display: block; width: 100%; height: auto; }
+    .home-pathway p { max-width: 760px; margin: 15px auto 0; text-align: center; font-size: .82rem; }
+
+    /* Time zones */
+    .home-zone-shell { padding: 28px 22px; color: #fff; background: linear-gradient(135deg, var(--qc-emerald-700), #095048); border-radius: var(--qc-radius-lg); box-shadow: 0 22px 54px rgba(11, 102, 95, .19); }
+    .home-zone-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 23px; }
+    .home-zone { padding: 15px 12px; text-align: center; background: rgba(255, 255, 255, .09); border: 1px solid rgba(255, 255, 255, .14); border-radius: 13px; }
+    .home-zone strong { display: block; color: #fff; font-size: .86rem; }
+    .home-zone span { display: block; margin-top: 3px; color: rgba(255, 255, 255, .65); font-size: .66rem; }
+    .home-zone-shell .home-kicker { color: #fff; }
+    .home-zone-shell .home-kicker::before { background: var(--qc-gold-200); }
+    .home-zone-shell .home-heading { color: #fff; }
+    .home-zone-shell .home-lead { color: rgba(255, 255, 255, .76); }
+
+    /* Pricing */
+    .home-pricing-grid { display: grid; gap: 14px; }
+    .home-price-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 26px 23px;
+      background: #fff;
+      border: 1px solid var(--qc-line);
+      border-radius: var(--qc-radius-md);
+      box-shadow: var(--qc-shadow-sm);
+    }
+
+    .home-price-card.is-popular { color: #fff; background: linear-gradient(150deg, var(--qc-navy-900), #0b334d); border: 0; box-shadow: var(--qc-shadow-lg); }
+    .home-price-badge { position: absolute; top: 14px; right: 14px; padding: 6px 9px; color: var(--qc-navy-900); background: var(--qc-gold-200); border-radius: 999px; font-size: .6rem; font-weight: 900; letter-spacing: .07em; text-transform: uppercase; }
+    .home-price-name { color: var(--qc-slate-600); font-size: .74rem; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; }
+    .home-price-card.is-popular .home-price-name { color: #8fe0d6; }
+    .home-price { display: flex; align-items: flex-end; gap: 7px; margin-top: 17px; }
+    .home-price strong { color: var(--qc-navy-900); font-size: 2.55rem; letter-spacing: -.05em; line-height: 1; }
+    .home-price span { padding-bottom: 4px; color: var(--qc-slate-600); font-size: .75rem; }
+    .home-price-card.is-popular .home-price strong { color: #fff; }
+    .home-price-card.is-popular .home-price span { color: rgba(255, 255, 255, .58); }
+    .home-price-divider { height: 1px; margin: 21px 0; background: var(--qc-line); }
+    .home-price-card.is-popular .home-price-divider { background: rgba(255, 255, 255, .13); }
+    .home-price-list { display: grid; gap: 11px; margin: 0 0 23px; padding: 0; list-style: none; }
+    .home-price-list li { display: flex; gap: 9px; color: var(--qc-slate-700); font-size: .81rem; line-height: 1.45; }
+    .home-price-list svg { flex: 0 0 16px; margin-top: 1px; color: var(--qc-emerald-600); }
+    .home-price-card.is-popular .home-price-list li { color: rgba(255, 255, 255, .78); }
+    .home-price-card.is-popular .home-price-list svg { color: #8fe0d6; }
+    .home-price-card .btn { width: 100%; margin-top: auto; }
+    .home-price-card.is-popular .btn { color: var(--qc-navy-900); background: #fff; border-color: #fff; box-shadow: none; }
+    .home-price-note { margin: 18px 0 0; text-align: center; font-size: .75rem; line-height: 1.6; }
+
+    /* FAQ */
+    .home-faq-layout { display: grid; gap: 30px; }
+    .home-faq-intro { align-self: start; }
+    .home-faq-intro .home-heading { font-size: clamp(2rem, 5vw, 3rem); }
+    .faq-list { display: grid; gap: 10px; }
+    .faq-item { overflow: hidden; background: #fff; border: 1px solid var(--qc-line); border-radius: 14px; box-shadow: 0 4px 16px rgba(5, 21, 34, .035); }
+    .faq-accordion-trigger { width: 100%; min-height: 64px; padding: 16px 17px; color: var(--qc-navy-900); background: transparent; border: 0; text-align: left; font: inherit; font-size: .9rem; font-weight: 800; cursor: pointer; }
+    .faq-icon { flex: 0 0 18px; color: var(--qc-emerald-600); transition: transform .2s ease; }
+    .faq-accordion-trigger[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-panel { padding: 0 17px 18px; color: var(--qc-slate-600); font-size: .83rem; line-height: 1.65; }
+
+    /* Assessment */
+    .home-assessment { background: var(--qc-navy-950); }
+    .home-assessment-grid { display: grid; gap: 30px; align-items: center; }
+    .home-assessment-copy .home-kicker { color: #8fe0d6; }
+    .home-assessment-copy .home-heading { color: #fff; }
+    .home-assessment-copy .home-lead { color: rgba(255, 255, 255, .68); }
+    .home-assessment-points { display: grid; gap: 12px; margin: 25px 0 0; padding: 0; list-style: none; }
+    .home-assessment-points li { display: flex; align-items: center; gap: 11px; color: rgba(255, 255, 255, .78); font-size: .86rem; font-weight: 700; }
+    .home-assessment-points svg { flex: 0 0 19px; color: #8fe0d6; }
+    .home-form-card { padding: 23px 19px; background: #fff; border-radius: 22px; box-shadow: 0 28px 70px rgba(0, 0, 0, .28); }
+    .home-form-card h3 { margin: 0; font-size: 1.35rem; }
+    .home-form-card > p { margin: 7px 0 21px; font-size: .78rem; }
+    .home-form-grid { display: grid; gap: 13px; }
+    .home-field { min-width: 0; }
+    .home-field label { display: block; margin-bottom: 6px; color: var(--qc-navy-900); font-size: .72rem; font-weight: 800; }
+    .home-field input,
+    .home-field select {
+      width: 100%;
+      min-height: 46px;
+      padding: 10px 12px;
+      color: var(--qc-navy-900);
+      background: #fbfcfd;
+      border: 1px solid #d8e0e6;
+      border-radius: 10px;
+      font: inherit;
+      font-size: .82rem;
+    }
+
+    .home-field input:focus,
+    .home-field select:focus { outline: 3px solid rgba(22, 149, 138, .16); border-color: var(--qc-emerald-500); }
+    .home-field .is-invalid { border-color: #c0392b; }
+    .field-error-msg { display: block; margin-top: 4px; color: #a42c21; font-size: .68rem; }
+    .home-form-submit { width: 100%; margin-top: 4px; }
+    .home-form-privacy { display: flex; align-items: flex-start; gap: 7px; margin: 11px 0 0; color: var(--qc-slate-600); font-size: .66rem; line-height: 1.5; }
+    .home-form-privacy svg { flex: 0 0 14px; margin-top: 1px; color: var(--qc-emerald-600); }
+    .form-status { margin-top: 12px; padding: 0; border-radius: 9px; font-size: .75rem; line-height: 1.5; }
+    .form-status.success,
+    .form-status.error { padding: 10px 12px; }
+    .form-status.success { color: #075a43; background: #e9f9f2; border: 1px solid #b9ead6; }
+    .form-status.error { color: #8f291f; background: #fff0ee; border: 1px solid #f1c4bd; }
+
+    /* Footer and mobile conversion bar */
+    .site-footer { background: var(--qc-navy-950); border-top: 1px solid rgba(255, 255, 255, .08); }
+    .site-footer .footer-grid { gap: 32px; }
+    .footer-brand img { width: 196px; height: auto; }
+    .footer-brand p,
+    .footer-bottom p { color: rgba(255, 255, 255, .58); }
+    .footer-link { color: rgba(255, 255, 255, .66); }
+    .footer-link:hover { color: #fff; }
+    .footer-col-title { color: #fff; }
+
+    .home-mobile-cta {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 66px;
+      padding: 8px 72px 8px 12px;
+      background: rgba(255, 255, 255, .97);
+      border-top: 1px solid var(--qc-line);
+      box-shadow: 0 -10px 30px rgba(5, 21, 34, .09);
+      backdrop-filter: blur(12px);
+    }
+
+    .home-mobile-cta span { color: var(--qc-slate-600); font-size: .64rem; font-weight: 700; line-height: 1.35; }
+    .home-mobile-cta .btn { min-height: 44px; padding: .66rem 1rem; border-radius: 11px; font-size: .75rem; white-space: nowrap; }
+    .whatsapp-float { bottom: 9px !important; right: 10px !important; width: 50px !important; height: 50px !important; border-radius: 50% !important; box-shadow: 0 12px 28px rgba(16, 128, 76, .28) !important; }
+    .whatsapp-float::before,
+    .whatsapp-float::after { border-radius: 50% !important; }
+
+    @media (min-width: 480px) {
+      .announcement-badge { display: inline-block; }
+      .home-hero-title span { white-space: nowrap; }
+      .home-hero-actions { display: flex; flex-wrap: wrap; }
+      .home-hero-actions .btn { width: auto; }
+      .home-form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-field--full { grid-column: 1 / -1; }
+    }
+
+    @media (min-width: 640px) {
+      .home-section { padding: 92px 0; }
+      .home-hero { padding: 64px 0 56px; }
+      .home-trust-grid { grid-template-columns: repeat(4, 1fr); }
+      .home-trust-item { min-height: 112px; border-bottom: 0; }
+      .home-trust-item:nth-child(2n) { border-right: 1px solid rgba(11, 41, 65, .08); }
+      .home-trust-item:last-child { border-right: 0; }
+      .home-program-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-benefit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-zone-grid { grid-template-columns: repeat(4, 1fr); }
+      .home-form-card { padding: 30px; }
+    }
+
+    @media (min-width: 768px) {
+      .home-audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .home-audience-card { padding: 34px; }
+      .home-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .home-step:nth-child(2) { transform: translateY(24px); }
+      .home-step:nth-child(3) { transform: translateY(48px); }
+      .home-steps-wrap { padding-bottom: 48px; }
+    }
+
+    @media (min-width: 1024px) {
+      body { padding-bottom: 0; }
+      .announcement-bar .container { font-size: .78rem; }
+      .site-header,
+      .header-inner { min-height: 78px; }
+      .brand-logo img { width: 206px; }
+      .nav-drawer { gap: 22px; }
+      .nav-list { gap: 4px; }
+      .nav-link { position: relative; padding: 28px 9px; }
+      .nav-link.active::after { position: absolute; right: 9px; bottom: 17px; left: 9px; height: 2px; background: var(--qc-emerald-600); border-radius: 999px; content: ""; }
+      .home-hero { min-height: 690px; display: flex; align-items: center; padding: 78px 0 72px; }
+      .home-hero-grid { grid-template-columns: minmax(0, 1.04fr) minmax(420px, .86fr); gap: 64px; }
+      .home-classroom { transform: rotate(1.25deg); }
+      .home-classroom:hover { transform: rotate(0); transition: transform .4s var(--qc-ease); }
+      .home-program-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .home-program-card { grid-column: span 2; min-height: 315px; }
+      .home-program-card:nth-child(4) { grid-column: 2 / span 2; }
+      .home-program-card:nth-child(5) { grid-column: 4 / span 2; }
+      .home-experience-grid { grid-template-columns: minmax(0, .9fr) minmax(430px, .8fr); gap: 80px; }
+      .home-benefit-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .home-zone-shell { padding: 45px; }
+      .home-pricing-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; }
+      .home-price-card.is-popular { transform: translateY(-12px); }
+      .js .home-price-card.is-popular.reveal-ready.is-visible { transform: translateY(-12px); }
+      .home-faq-layout { grid-template-columns: minmax(280px, .72fr) minmax(0, 1.18fr); gap: 70px; }
+      .home-faq-intro { position: sticky; top: 124px; }
+      .home-assessment-grid { grid-template-columns: minmax(0, .8fr) minmax(520px, .82fr); gap: 76px; }
+      .home-mobile-cta { display: none; }
+      .whatsapp-float { right: 22px !important; bottom: 22px !important; width: 58px !important; height: 58px !important; }
+    }
+
+    @media (max-width: 1023.98px) {
+      .nav-drawer { background: #fff; }
+      .nav-drawer .nav-link { font-size: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .home-step:nth-child(2), .home-step:nth-child(3), .home-price-card.is-popular { transform: none; }
+      .js .home-price-card.is-popular.reveal-ready.is-visible { transform: none; }
+    }
+  </style>
+
   <script src="/assets/js/config.js"></script>
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/form.js" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "QuranCrest Academy",
-    "url": "https://qurancrest.com/",
-    "logo": "https://qurancrest.com/assets/images/logo.svg",
-    "description": "Live one-to-one online Quran classes for kids, adults, and families across the United States.",
-    "areaServed": {
-      "@type": "Country",
-      "name": "United States"
-    }
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://qurancrest.com/#academy",
+        "name": "QuranCrest Academy",
+        "url": "https://qurancrest.com/",
+        "logo": "https://qurancrest.com/assets/images/logo.svg",
+        "description": "Live one-to-one online Quran classes for kids, adults, and families across the United States.",
+        "areaServed": { "@type": "Country", "name": "United States" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do live one-to-one Quran classes work?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Classes take place live by video call. A tutor works directly with the student on recitation, Tajweed, memorization, or beginner foundations according to the student's plan." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are female Quran tutors available?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Male and female tutor options are available, and families can share their preference when booking the free assessment." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are classes available across US time zones?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Class scheduling is available around Eastern, Central, Mountain, and Pacific time zones, subject to tutor availability." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is a credit card required for the free assessment?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. The assessment can be booked without providing card details." }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Announcement Bar -->
-  <aside class="announcement-bar" aria-label="Special Offer">
+  <aside class="announcement-bar" aria-label="Current offer">
     <div class="container">
-      <span>
-        <strong class="announcement-badge">Founding Family Offer</strong>
-        One Free Assessment — No Card Required
-      </span>
+      <span><strong class="announcement-badge">Founding Family Offer</strong>Free assessment — no card required</span>
     </div>
   </aside>
 
-  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="brand-logo" aria-label="QuranCrest Academy Home">
+      <a href="/" class="brand-logo" aria-label="QuranCrest Academy home">
         <img src="/assets/images/logo.svg" alt="QuranCrest Academy" width="220" height="42">
       </a>
 
-      <button id="menu-toggle" class="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <button id="menu-toggle" class="hamburger-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
       </button>
 
-      <nav id="primary-nav" class="nav-drawer" aria-label="Main Navigation">
+      <nav id="primary-nav" class="nav-drawer" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="/" class="nav-link active" aria-current="page">Home</a></li>
           <li><a href="/online-quran-classes-usa/" class="nav-link">USA Classes</a></li>
@@ -70,565 +914,479 @@
           <li><a href="/contact/" class="nav-link">Contact</a></li>
         </ul>
         <div class="header-actions">
-          <a href="/free-assessment/" class="btn btn-primary">Book Free Assessment</a>
+          <a href="#assessment" class="btn btn-primary">Book Free Assessment</a>
         </div>
       </nav>
       <div id="nav-backdrop" class="nav-backdrop" aria-hidden="true"></div>
     </div>
   </header>
 
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <div class="hero-pill">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Serving Students &amp; Families Across the United States</span>
-            </div>
+  <main id="main-content" class="home-main">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="container home-hero-grid">
+        <div class="home-hero-content">
+          <div class="home-eyebrow">
+            <span class="home-eyebrow-dot" aria-hidden="true"></span>
+            One-to-one Quran learning for US families
+          </div>
+          <h1 id="hero-title" class="home-hero-title">Learn Quran with <span>personal guidance.</span></h1>
+          <p class="home-hero-copy">Live online Quran classes for kids and adults, with male and female tutor options, flexible US timings, and a learning plan shaped around the student.</p>
 
-            <h1 class="hero-title">Online Quran Classes for Kids &amp; Adults in the USA</h1>
-
-            <p class="hero-subtitle">
-              Learn Quran online through live one-to-one lessons with male and female tutor options, flexible US timings, and a personalized learning plan.
-            </p>
-
-            <div class="hero-ctas">
-              <a href="/free-assessment/" class="btn btn-primary">Book a Free Assessment</a>
-              <a href="#" class="btn btn-whatsapp js-whatsapp-btn" data-whatsapp-msg="Assalamu Alaikum! I would like to inquire about booking a free Quran learning assessment for my family.">
-                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2c-5.517 0-9.993 4.476-9.993 9.993 0 1.763.459 3.483 1.332 5.006l-1.417 5.178 5.299-1.39c1.472.803 3.136 1.226 4.779 1.226 5.517 0 9.993-4.476 9.993-9.993 0-5.517-4.476-9.993-9.993-9.993zm5.834 14.175c-.244.688-1.226 1.282-1.996 1.442-.533.111-1.227.2-3.571-.77-2.997-1.24-4.93-4.29-5.08-4.489-.15-.198-1.222-1.626-1.222-3.1 0-1.474.773-2.2 1.047-2.5.274-.3.598-.375.798-.375.2 0 .399.002.573.01.187.008.437-.071.685.525.25.599.848 2.072.923 2.222.075.15.125.324.025.524-.099.2-.149.324-.299.499-.15.175-.315.391-.45.525-.15.15-.306.315-.132.614.175.299.778 1.285 1.671 2.081 1.147 1.022 2.115 1.339 2.414 1.489.299.15.474.125.649-.075.175-.2.749-.873.948-1.172.2-.299.399-.25.673-.15s1.746.823 2.045.973c.299.15.499.225.574.35.074.125.074.723-.17 1.411z"/></svg>
-                <span>Chat on WhatsApp</span>
-              </a>
-            </div>
-
-            <p class="hero-reassurance">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-emerald)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>No card required • Parent-friendly enrollment • Flexible scheduling</span>
-            </p>
-
-            <div class="trust-points-grid">
-              <div class="trust-point-item">
-                <svg class="trust-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Live One-to-One Lessons</span>
-              </div>
-              <div class="trust-point-item">
-                <svg class="trust-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Male &amp; Female Tutor Options</span>
-              </div>
-              <div class="trust-point-item">
-                <svg class="trust-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Flexible US Time Zones</span>
-              </div>
-              <div class="trust-point-item">
-                <svg class="trust-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Parent Progress Updates</span>
-              </div>
-            </div>
+          <div class="home-hero-actions">
+            <a href="#assessment" class="btn btn-primary">
+              Book a Free Assessment
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#programs" class="btn home-btn-quiet">Explore Programs</a>
           </div>
 
-          <div class="hero-illustration-wrapper">
-            <img src="/assets/images/hero-illustration.svg" alt="Live One-to-One Online Quran Class Illustration" class="hero-illustration" width="520" height="400">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Trust Strip -->
-    <section class="trust-strip" aria-label="Key Highlights">
-      <div class="container">
-        <div class="trust-strip-inner">
-          <div class="strip-item">
-            <svg class="strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-            <span class="strip-title">Beginner Friendly</span>
-          </div>
-          <div class="strip-item">
-            <svg class="strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <span class="strip-title">Kids &amp; Adults</span>
-          </div>
-          <div class="strip-item">
-            <svg class="strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            <span class="strip-title">Personalized Lessons</span>
-          </div>
-          <div class="strip-item">
-            <svg class="strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <span class="strip-title">Monthly Plans</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Course Programs Section -->
-    <section class="section-padding" id="courses" aria-labelledby="courses-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="courses-heading">Choose the Right Quran Learning Program</h2>
-          <p class="section-subtitle">Structured, step-by-step Quran programs tailored to the student's age, level, and learning speed.</p>
-        </div>
-
-        <div class="cards-grid cards-grid-5">
-          <!-- Course 1 -->
-          <article class="card">
-            <div class="card-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <h3 class="card-title">Noorani Qaida for Beginners</h3>
-            <p class="card-desc">Build a strong foundation by learning Arabic letters, pronunciation, and basic joining rules.</p>
-            <div class="card-action">
-              <a href="/courses/#qaida" class="btn btn-outline btn-full">Learn More</a>
-            </div>
-          </article>
-
-          <!-- Course 2 -->
-          <article class="card">
-            <div class="card-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <h3 class="card-title">Quran Reading</h3>
-            <p class="card-desc">Develop confidence and fluency in reading the Quran with personal guidance from a tutor.</p>
-            <div class="card-action">
-              <a href="/courses/#reading" class="btn btn-outline btn-full">Learn More</a>
-            </div>
-          </article>
-
-          <!-- Course 3 -->
-          <article class="card">
-            <div class="card-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <h3 class="card-title">Quran with Tajweed</h3>
-            <p class="card-desc">Learn essential Tajweed rules and improve pronunciation through guided one-to-one practice.</p>
-            <div class="card-action">
-              <a href="/courses/#tajweed" class="btn btn-outline btn-full">Learn More</a>
-            </div>
-          </article>
-
-          <!-- Course 4 -->
-          <article class="card">
-            <div class="card-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <h3 class="card-title">Quran Memorization</h3>
-            <p class="card-desc">Follow a structured memorization and revision plan based on the student’s ability and goals.</p>
-            <div class="card-action">
-              <a href="/courses/#hifz" class="btn btn-outline btn-full">Learn More</a>
-            </div>
-          </article>
-
-          <!-- Course 5 -->
-          <article class="card">
-            <div class="card-icon-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3 class="card-title">Islamic Studies for Kids</h3>
-            <p class="card-desc">Age-appropriate lessons covering Islamic manners, daily duas, basic beliefs, and essential practices.</p>
-            <div class="card-action">
-              <a href="/courses/#islamic-studies" class="btn btn-outline btn-full">Learn More</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="section-padding" style="background-color: var(--color-ivory);" aria-labelledby="how-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="how-heading">Start Learning in Three Simple Steps</h2>
-          <p class="section-subtitle">A stress-free enrollment process designed for busy American families.</p>
-        </div>
-
-        <div class="steps-grid">
-          <div class="step-card">
-            <span class="step-number">1</span>
-            <h3>Book a Free Assessment</h3>
-            <p class="text-muted">Tell us the student’s age, current level, preferred schedule, and learning goals.</p>
-          </div>
-
-          <div class="step-card">
-            <span class="step-number">2</span>
-            <h3>Meet the Tutor</h3>
-            <p class="text-muted">We help match the student with a suitable male or female tutor based on preferences.</p>
-          </div>
-
-          <div class="step-card">
-            <span class="step-number">3</span>
-            <h3>Start a Personal Learning Plan</h3>
-            <p class="text-muted">Begin regular one-to-one classes and receive progress updates on the student's development.</p>
-          </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 2.5rem;">
-          <a href="/free-assessment/" class="btn btn-primary">Schedule Your Free Assessment</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose QuranCrest Section -->
-    <section class="section-padding" aria-labelledby="why-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="why-heading">Built Around the Student, Not a One-Size-Fits-All Course</h2>
-          <p class="section-subtitle">We prioritize individual student needs, parent convenience, and transparent communication.</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">Personal One-to-One Attention</strong>
-              <span class="text-muted" style="font-size:0.875rem;">100% focused instruction tailored to the student's learning speed.</span>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">Male &amp; Female Tutor Options</strong>
-              <span class="text-muted" style="font-size:0.875rem;">Respectful tutor matching according to family preference.</span>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">Beginner-Friendly Learning</strong>
-              <span class="text-muted" style="font-size:0.875rem;">Patient guidance starting from Arabic alphabet basics.</span>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">Flexible US Time Zones</strong>
-              <span class="text-muted" style="font-size:0.875rem;">Classes scheduled around Eastern, Central, Mountain, &amp; Pacific times.</span>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">Parent-Controlled Communication</strong>
-              <span class="text-muted" style="font-size:0.875rem;">All scheduling and lesson communications go through parents.</span>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">Regular Progress Updates</strong>
-              <span class="text-muted" style="font-size:0.875rem;">Know exactly which surahs and lessons your child has completed.</span>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">Request Tutor Change</strong>
-              <span class="text-muted" style="font-size:0.875rem;">Easily switch tutors if needed to ensure the perfect student fit.</span>
-            </div>
-          </div>
-
-          <div class="feature-box">
-            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            <div>
-              <strong style="display:block; color:var(--color-navy); margin-bottom:0.2rem;">No Long-Term Contracts</strong>
-              <span class="text-muted" style="font-size:0.875rem;">Simple monthly payment structure. Pause or cancel whenever required.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learning Pathway Section -->
-    <section class="section-padding" style="background-color: var(--color-white);" aria-labelledby="pathway-heading">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="pathway-heading">A Clear Path from First Lesson to Confident Recitation</h2>
-          <p class="section-subtitle">Every student progresses at a personalized pace with structured milestones along the way.</p>
-        </div>
-
-        <div class="pathway-container">
-          <div class="pathway-svg-wrapper">
-            <img src="/assets/images/learning-path.svg" alt="Quran Learning Pathway Diagram: Assessment to Foundation, Fluent Reading, Tajweed, and Memorization" width="800" height="220" style="width:100%; height:auto;">
-          </div>
-          <p class="text-muted" style="max-width: 680px; margin: 0 auto; font-size: 0.95rem;">
-            Whether starting from scratch or refining advanced Tajweed, our step-by-step framework ensures students build lasting confidence without feeling overwhelmed.
+          <p class="home-reassurance">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span>No card required · Parent-friendly enrollment · Monthly plans</span>
           </p>
+
+          <div class="home-hero-proof" aria-label="Academy highlights">
+            <div class="home-proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Live one-to-one lessons</span></div>
+            <div class="home-proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Male &amp; female tutor options</span></div>
+            <div class="home-proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Flexible US time zones</span></div>
+            <div class="home-proof-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Progress updates for parents</span></div>
+          </div>
+        </div>
+
+        <div class="home-classroom" aria-label="Illustration of an online one-to-one Quran class">
+          <div class="home-classroom-shell">
+            <div class="home-classroom-top">
+              <span class="home-live-label">Live one-to-one lesson</span>
+              <span class="home-classroom-time">Personal learning room</span>
+            </div>
+            <div class="home-classroom-screen">
+              <img src="/assets/images/hero-illustration.svg" alt="Student learning Quran online with a personal tutor" width="520" height="400">
+              <div class="home-lesson-note" aria-hidden="true">
+                <b>Today’s focus</b>
+                <span>Guided reading, correction and practice at the student’s pace.</span>
+              </div>
+            </div>
+            <div class="home-classroom-footer" aria-hidden="true">
+              <div class="home-classroom-stat"><strong>1 : 1</strong><span>Personal attention</span></div>
+              <div class="home-classroom-stat"><strong>Live</strong><span>Real-time guidance</span></div>
+              <div class="home-classroom-stat"><strong>Flexible</strong><span>US scheduling</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="section-padding" id="pricing" aria-labelledby="pricing-heading" style="background-color: var(--color-ivory);">
-      <div class="container">
-        <div class="section-header">
-          <h2 id="pricing-heading">Simple Monthly Plans</h2>
-          <p class="section-subtitle">Affordable fee structures with no long-term contracts. Sibling discounts available.</p>
+    <section class="home-trust-ribbon" aria-label="Learning highlights">
+      <div class="container home-trust-grid">
+        <div class="home-trust-item">
+          <span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 10 9-5 9 5-9 5-9-5Z"/><path d="m7 13v4c3 2 7 2 10 0v-4"/></svg></span>
+          <strong>Beginner friendly</strong>
         </div>
-
-        <div class="pricing-grid">
-          <!-- Starter -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3 class="pricing-plan-name">Starter</h3>
-              <div class="pricing-price">$29</div>
-              <span class="pricing-period">per month</span>
-            </div>
-            <ul class="pricing-features">
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>2 classes</strong> per week</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>30 minutes</strong> per class</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Live one-to-one lessons</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Male/Female tutor preference</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Progress updates</span>
-              </li>
-            </ul>
-            <a href="/free-assessment/" class="btn btn-outline btn-full">Book Free Assessment</a>
-          </div>
-
-          <!-- Standard -->
-          <div class="pricing-card is-popular">
-            <span class="popular-badge">Most Popular</span>
-            <div class="pricing-header">
-              <h3 class="pricing-plan-name">Standard</h3>
-              <div class="pricing-price">$39</div>
-              <span class="pricing-period">per month</span>
-            </div>
-            <ul class="pricing-features">
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>3 classes</strong> per week</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>30 minutes</strong> per class</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Live one-to-one lessons</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Male/Female tutor preference</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Progress updates</span>
-              </li>
-            </ul>
-            <a href="/free-assessment/" class="btn btn-primary btn-full">Book Free Assessment</a>
-          </div>
-
-          <!-- Intensive -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3 class="pricing-plan-name">Intensive</h3>
-              <div class="pricing-price">$59</div>
-              <span class="pricing-period">per month</span>
-            </div>
-            <ul class="pricing-features">
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>5 classes</strong> per week</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>30 minutes</strong> per class</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Live one-to-one lessons</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Male/Female tutor preference</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Progress updates</span>
-              </li>
-            </ul>
-            <a href="/free-assessment/" class="btn btn-outline btn-full">Book Free Assessment</a>
-          </div>
-
-          <!-- Hifz -->
-          <div class="pricing-card">
-            <div class="pricing-header">
-              <h3 class="pricing-plan-name">Hifz</h3>
-              <div class="pricing-price">$79</div>
-              <span class="pricing-period">per month</span>
-            </div>
-            <ul class="pricing-features">
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>5 classes</strong> per week</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Up to <strong>45 minutes</strong> per class</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Memorization &amp; revision plan</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Live one-to-one lessons</span>
-              </li>
-              <li class="pricing-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Progress updates</span>
-              </li>
-            </ul>
-            <a href="/free-assessment/" class="btn btn-outline btn-full">Book Free Assessment</a>
-          </div>
+        <div class="home-trust-item">
+          <span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span>
+          <strong>Kids &amp; adults</strong>
         </div>
-
-        <div style="margin-top: 2rem; background-color: var(--color-white); border: 1px solid var(--color-border); padding: 1.25rem 1.5rem; border-radius: var(--radius-md); font-size: 0.9rem; color: var(--color-muted); text-align: center;">
-          <p style="margin:0;">
-            <strong style="color:var(--color-navy);">Important Note:</strong> One free assessment is provided with no card required. Monthly plans renew on a month-to-month basis without contracts. Sibling discounts are calculated after the free assessment when finalizing class schedules.
-          </p>
+        <div class="home-trust-item">
+          <span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>
+          <strong>Personalized lessons</strong>
+        </div>
+        <div class="home-trust-item">
+          <span class="home-trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></span>
+          <strong>Simple monthly plans</strong>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="section-padding" id="faq" aria-labelledby="faq-heading">
+    <section class="home-section" aria-labelledby="audience-heading">
       <div class="container">
-        <div class="section-header">
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
-          <p class="section-subtitle">Answers to common questions from Muslim parents and adult learners across the US.</p>
+        <div class="home-section-head home-section-head--center">
+          <span class="home-kicker">Learning for every stage</span>
+          <h2 id="audience-heading" class="home-heading">A calmer, clearer way to learn Quran <em>online.</em></h2>
+          <p class="home-lead">Whether the student is meeting Arabic letters for the first time or returning to improve recitation, each lesson follows an appropriate level and pace.</p>
+        </div>
+
+        <div class="home-audience-grid">
+          <article class="home-audience-card home-audience-card--kids card">
+            <span class="home-audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M16 11h6"/></svg></span>
+            <h3>Quran classes for kids</h3>
+            <p>Patient one-to-one guidance with parent-controlled communication and a clear path from Qaida foundations to confident reading.</p>
+            <ul class="home-mini-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Beginner-friendly teaching</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Parent progress updates</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>After-school and weekend options</li>
+            </ul>
+            <a href="#assessment" class="home-arrow-link">Find the right starting level <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="home-audience-card home-audience-card--adults card">
+            <span class="home-audience-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/><path d="M19 5h3M20.5 3.5v3"/></svg></span>
+            <h3>Quran classes for adults</h3>
+            <p>Respectful, private lessons for beginners and returning learners who want better fluency, Tajweed, or a consistent memorization routine.</p>
+            <ul class="home-mini-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Learn without classroom pressure</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Male or female tutor preference</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Timings around work and family</li>
+            </ul>
+            <a href="#assessment" class="home-arrow-link">Discuss your learning goal <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="home-section home-section--soft" aria-labelledby="programs-heading">
+      <div class="container">
+        <div class="home-section-head">
+          <span class="home-kicker">Structured Quran programs</span>
+          <h2 id="programs-heading" class="home-heading">Start at the right level. Build with <em>purpose.</em></h2>
+          <p class="home-lead">Five focused programs cover the essential journey from recognizing Arabic letters to reading, Tajweed, memorization, and foundational Islamic studies.</p>
+        </div>
+
+        <div class="home-program-grid">
+          <article class="home-program-card card">
+            <div class="home-program-top"><span class="home-program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span><span class="home-program-index">01</span></div>
+            <h3>Noorani Qaida</h3>
+            <p>Arabic letters, correct sounds, joining rules, and a confident first step toward Quran reading.</p>
+            <a href="/courses/#qaida" class="home-arrow-link">View program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="home-program-card home-program-card--featured card">
+            <div class="home-program-top"><span class="home-program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"/></svg></span><span class="home-program-index">02</span></div>
+            <h3>Quran Reading</h3>
+            <p>Guided practice to improve reading flow, accuracy, confidence, and consistency.</p>
+            <a href="/courses/#reading" class="home-arrow-link">View program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="home-program-card card">
+            <div class="home-program-top"><span class="home-program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span class="home-program-index">03</span></div>
+            <h3>Quran with Tajweed</h3>
+            <p>Essential Tajweed rules applied through live listening, correction, and repetition.</p>
+            <a href="/courses/#tajweed" class="home-arrow-link">View program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="home-program-card card">
+            <div class="home-program-top"><span class="home-program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9L12 3Z"/></svg></span><span class="home-program-index">04</span></div>
+            <h3>Quran Memorization</h3>
+            <p>A structured Hifz and revision routine adapted to ability, schedule, and long-term goals.</p>
+            <a href="/courses/#hifz" class="home-arrow-link">View program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+
+          <article class="home-program-card card">
+            <div class="home-program-top"><span class="home-program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></span><span class="home-program-index">05</span></div>
+            <h3>Islamic Studies for Kids</h3>
+            <p>Age-appropriate lessons in daily duas, manners, core beliefs, and essential practices.</p>
+            <a href="/courses/#islamic-studies" class="home-arrow-link">View program <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-experience" aria-labelledby="experience-heading">
+      <div class="container home-experience-grid">
+        <div>
+          <span class="home-kicker">Inside a live lesson</span>
+          <h2 id="experience-heading" class="home-heading">Focused teaching. Real-time correction. A pace that fits the student.</h2>
+          <p class="home-lead">One-to-one learning gives the tutor room to listen closely, correct gently, and spend lesson time where the student needs it most.</p>
+          <ul class="home-experience-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg><span><b>Private learning room</b>Direct tutor attention without group-class pressure.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg><span><b>Active correction</b>Reading and pronunciation are guided during the lesson.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg><span><b>Personal lesson focus</b>Content follows the student’s current level and goals.</span></li>
+          </ul>
+        </div>
+
+        <div class="home-lesson-board" aria-label="Example lesson flow">
+          <div class="home-lesson-board-head">
+            <div class="home-lesson-board-title"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>Example 30-minute lesson</div>
+            <span>Plan adapts by level</span>
+          </div>
+          <div class="home-lesson-timeline">
+            <div class="home-lesson-row"><span class="home-lesson-time">00–05</span><span class="home-lesson-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Warm-up &amp; revision</strong><p>Review the previous lesson and identify today’s focus.</p></div></div>
+            <div class="home-lesson-row"><span class="home-lesson-time">05–20</span><span class="home-lesson-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Guided learning</strong><p>New reading, rule, passage, or memorization target.</p></div></div>
+            <div class="home-lesson-row"><span class="home-lesson-time">20–27</span><span class="home-lesson-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Practice &amp; correction</strong><p>Repeat with feedback to reinforce accuracy.</p></div></div>
+            <div class="home-lesson-row"><span class="home-lesson-time">27–30</span><span class="home-lesson-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg></span><div><strong>Next-step plan</strong><p>Confirm practice and the next lesson target.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-section--soft" aria-labelledby="steps-heading">
+      <div class="container home-steps-wrap">
+        <div class="home-section-head home-section-head--center">
+          <span class="home-kicker">Simple enrollment</span>
+          <h2 id="steps-heading" class="home-heading">From first message to first lesson in <em>three steps.</em></h2>
+          <p class="home-lead">Tell us about the student, meet a suitable tutor, and begin with a plan created around the current level.</p>
+        </div>
+
+        <div class="home-steps">
+          <article class="home-step step-card"><span class="home-step-number">1</span><h3>Book a free assessment</h3><p>Share the student’s age, current level, program interest, tutor preference, and US time zone.</p></article>
+          <article class="home-step step-card"><span class="home-step-number">2</span><h3>Meet a suitable tutor</h3><p>Use the first session to understand the teaching approach and discuss the right starting point.</p></article>
+          <article class="home-step step-card"><span class="home-step-number">3</span><h3>Begin a personal plan</h3><p>Choose a monthly schedule and start regular one-to-one lessons with progress updates.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="home-section-head">
+          <span class="home-kicker">Why QuranCrest</span>
+          <h2 id="why-heading" class="home-heading">Built around the student—and the family’s <em>real schedule.</em></h2>
+          <p class="home-lead">The learning experience is designed to be personal, flexible, transparent, and easier for families to manage.</p>
+        </div>
+
+        <div class="home-benefit-grid">
+          <article class="home-benefit feature-box"><span class="home-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span><div><h3>One-to-one attention</h3><p>Lesson time is focused on one student’s level, needs, and learning speed.</p></div></article>
+          <article class="home-benefit feature-box"><span class="home-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg></span><div><h3>Tutor preference</h3><p>Families can request a male or female tutor when arranging the assessment.</p></div></article>
+          <article class="home-benefit feature-box"><span class="home-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><h3>Flexible US timings</h3><p>Scheduling considers Eastern, Central, Mountain, and Pacific time zones.</p></div></article>
+          <article class="home-benefit feature-box"><span class="home-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span><div><h3>Beginner-friendly path</h3><p>Students can start from Arabic letters without embarrassment or pressure.</p></div></article>
+          <article class="home-benefit feature-box"><span class="home-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-7"/></svg></span><div><h3>Progress communication</h3><p>Parents can stay informed about completed work and areas that need practice.</p></div></article>
+          <article class="home-benefit feature-box"><span class="home-benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3M4 11h16"/><rect x="4" y="5" width="16" height="16" rx="2"/></svg></span><div><h3>Month-to-month plans</h3><p>Choose a schedule without committing to a long-term class contract.</p></div></article>
+        </div>
+
+        <div class="home-pathway pathway-container">
+          <img src="/assets/images/learning-path.svg" alt="Quran learning pathway from assessment and foundations to reading, Tajweed, and memorization" width="800" height="220" loading="lazy">
+          <p>Every student starts at a different point. The free assessment helps identify the most suitable place to begin.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section home-section--mint" aria-labelledby="zones-heading">
+      <div class="container">
+        <div class="home-zone-shell">
+          <span class="home-kicker">Designed for the United States</span>
+          <h2 id="zones-heading" class="home-heading">Quran classes that fit across US time zones.</h2>
+          <p class="home-lead">Tell us your time zone and preferred window. We will discuss available after-school, evening, or weekend options during the assessment.</p>
+          <div class="home-zone-grid" aria-label="US time zones served">
+            <div class="home-zone"><strong>Eastern</strong><span>ET · EST / EDT</span></div>
+            <div class="home-zone"><strong>Central</strong><span>CT · CST / CDT</span></div>
+            <div class="home-zone"><strong>Mountain</strong><span>MT · MST / MDT</span></div>
+            <div class="home-zone"><strong>Pacific</strong><span>PT · PST / PDT</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="home-section home-section--soft" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="home-section-head home-section-head--center">
+          <span class="home-kicker">Clear monthly pricing</span>
+          <h2 id="pricing-heading" class="home-heading">Choose a learning rhythm that works for your <em>week.</em></h2>
+          <p class="home-lead">Start with a free assessment, then select a month-to-month plan based on the student’s goals and schedule.</p>
+        </div>
+
+        <div class="home-pricing-grid">
+          <article class="home-price-card pricing-card">
+            <span class="home-price-name">Starter</span>
+            <div class="home-price"><strong>$29</strong><span>/ month</span></div>
+            <div class="home-price-divider"></div>
+            <ul class="home-price-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span><strong>2 classes</strong> per week</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span><strong>30 minutes</strong> per class</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Live one-to-one lessons</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Progress updates</span></li>
+            </ul>
+            <a href="#assessment" class="btn home-btn-quiet">Book Free Assessment</a>
+          </article>
+
+          <article class="home-price-card pricing-card is-popular">
+            <span class="home-price-badge">Most popular</span>
+            <span class="home-price-name">Standard</span>
+            <div class="home-price"><strong>$39</strong><span>/ month</span></div>
+            <div class="home-price-divider"></div>
+            <ul class="home-price-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span><strong>3 classes</strong> per week</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span><strong>30 minutes</strong> per class</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Live one-to-one lessons</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Tutor preference &amp; updates</span></li>
+            </ul>
+            <a href="#assessment" class="btn">Book Free Assessment</a>
+          </article>
+
+          <article class="home-price-card pricing-card">
+            <span class="home-price-name">Intensive</span>
+            <div class="home-price"><strong>$59</strong><span>/ month</span></div>
+            <div class="home-price-divider"></div>
+            <ul class="home-price-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span><strong>5 classes</strong> per week</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span><strong>30 minutes</strong> per class</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Live one-to-one lessons</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Tutor preference &amp; updates</span></li>
+            </ul>
+            <a href="#assessment" class="btn home-btn-quiet">Book Free Assessment</a>
+          </article>
+
+          <article class="home-price-card pricing-card">
+            <span class="home-price-name">Hifz</span>
+            <div class="home-price"><strong>$79</strong><span>/ month</span></div>
+            <div class="home-price-divider"></div>
+            <ul class="home-price-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span><strong>5 classes</strong> per week</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Up to <strong>45 minutes</strong></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Memorization &amp; revision plan</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Progress updates</span></li>
+            </ul>
+            <a href="#assessment" class="btn home-btn-quiet">Book Free Assessment</a>
+          </article>
+        </div>
+
+        <p class="home-price-note"><strong>One free assessment, no card required.</strong> Plans renew month to month. Sibling discounts can be discussed after the assessment when schedules are confirmed.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="home-section" aria-labelledby="faq-heading">
+      <div class="container home-faq-layout">
+        <div class="home-faq-intro">
+          <span class="home-kicker">Common questions</span>
+          <h2 id="faq-heading" class="home-heading">Helpful answers before you begin.</h2>
+          <p class="home-lead">Still deciding? Use WhatsApp or the free assessment form and tell us what the student needs.</p>
+          <a href="#assessment" class="home-arrow-link" style="margin-top:20px">Book an assessment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
 
         <div class="faq-list">
           <div class="faq-item">
-            <button class="faq-accordion-trigger" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1">
-              <span>How do live one-to-one classes work?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faq-panel-1" class="faq-panel" aria-labelledby="faq-btn-1" hidden>
-              Classes take place live via video call (Zoom or Google Meet). The tutor connects directly with the student for personalized one-to-one instruction, guiding recitation, Tajweed corrections, or memorization practice.
-            </div>
+            <button class="faq-accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-1" id="faq-btn-1"><span>How do live one-to-one classes work?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div id="faq-panel-1" class="faq-panel" aria-labelledby="faq-btn-1" hidden>Classes take place live by video call. The tutor works directly with the student on recitation, Tajweed, memorization, or beginner foundations according to the student’s learning plan.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-accordion-trigger" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
-              <span>Are female tutors available for sisters and young girls?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faq-panel-2" class="faq-panel" aria-labelledby="faq-btn-2" hidden>
-              Yes, we have both qualified male and female tutors available. Families can specify their preference during the free assessment setup.
-            </div>
+            <button class="faq-accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2"><span>Are female tutors available?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div id="faq-panel-2" class="faq-panel" aria-labelledby="faq-btn-2" hidden>Male and female tutor options are available. Families can share their preference when arranging the free assessment.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-accordion-trigger" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
-              <span>What times are classes held in US time zones?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faq-panel-3" class="faq-panel" aria-labelledby="faq-btn-3" hidden>
-              We offer flexible class slots designed specifically around Eastern (EST), Central (CST), Mountain (MST), and Pacific (PST) times, including after-school hours, evenings, and weekend slots.
-            </div>
+            <button class="faq-accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3"><span>What class times are available in the United States?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div id="faq-panel-3" class="faq-panel" aria-labelledby="faq-btn-3" hidden>Scheduling is available around Eastern, Central, Mountain, and Pacific time zones. Share your preferred after-school, evening, or weekend window and the academy will discuss matching availability.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-accordion-trigger" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
-              <span>Do I need to enter credit card details for the free assessment?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faq-panel-4" class="faq-panel" aria-labelledby="faq-btn-4" hidden>
-              No payment or credit card is required to book your free assessment. You only choose a paid plan if you decide to continue after the trial lesson.
-            </div>
+            <button class="faq-accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4"><span>Is a credit card required for the free assessment?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div id="faq-panel-4" class="faq-panel" aria-labelledby="faq-btn-4" hidden>No. You can book the assessment without card details. A monthly plan is only selected if you decide to continue.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-accordion-trigger" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
-              <span>What is the minimum age for kids to start?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faq-panel-5" class="faq-panel" aria-labelledby="faq-btn-5" hidden>
-              We typically accept children starting from age 5 for Noorani Qaida and basic Arabic letter recognition. Lessons for young children are kept interactive and engaging.
-            </div>
+            <button class="faq-accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5"><span>What age can children begin?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div id="faq-panel-5" class="faq-panel" aria-labelledby="faq-btn-5" hidden>Children typically begin from age 5 with Noorani Qaida or basic Arabic letter recognition. The assessment helps confirm readiness and the most suitable starting level.</div>
           </div>
-
           <div class="faq-item">
-            <button class="faq-accordion-trigger" aria-expanded="false" aria-controls="faq-panel-6" id="faq-btn-6">
-              <span>How do parents track student progress?</span>
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div id="faq-panel-6" class="faq-panel" aria-labelledby="faq-btn-6" hidden>
-              Parents receive regular updates regarding completed Surahs, lesson milestones, attendance, and area focus directly via email or WhatsApp.
-            </div>
+            <button class="faq-accordion-trigger" type="button" aria-expanded="false" aria-controls="faq-panel-6" id="faq-btn-6"><span>How can parents follow progress?</span><svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></button>
+            <div id="faq-panel-6" class="faq-panel" aria-labelledby="faq-btn-6" hidden>Parents can receive updates about completed lessons, attendance, milestones, and the areas the student should continue practicing.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA Banner -->
-    <section class="section-padding" style="background-color: var(--color-navy); color: var(--color-white);">
-      <div class="container" style="text-align: center; max-width: 780px;">
-        <h2 style="color: var(--color-white); margin-bottom: 1rem;">Ready to Start Your Family's Quran Journey?</h2>
-        <p style="color: var(--color-ivory); font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">
-          Book your free 30-minute assessment today. Experience live one-to-one instruction with zero risk or card required.
-        </p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-          <a href="/free-assessment/" class="btn btn-primary">Book Free Assessment</a>
-          <a href="#" class="btn btn-whatsapp js-whatsapp-btn" data-whatsapp-msg="Assalamu Alaikum! I would like to schedule a free assessment for my child.">
-            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2c-5.517 0-9.993 4.476-9.993 9.993 0 1.763.459 3.483 1.332 5.006l-1.417 5.178 5.299-1.39c1.472.803 3.136 1.226 4.779 1.226 5.517 0 9.993-4.476 9.993-9.993 0-5.517-4.476-9.993-9.993-9.993zm5.834 14.175c-.244.688-1.226 1.282-1.996 1.442-.533.111-1.227.2-3.571-.77-2.997-1.24-4.93-4.29-5.08-4.489-.15-.198-1.222-1.626-1.222-3.1 0-1.474.773-2.2 1.047-2.5.274-.3.598-.375.798-.375.2 0 .399.002.573.01.187.008.437-.071.685.525.25.599.848 2.072.923 2.222.075.15.125.324.025.524-.099.2-.149.324-.299.499-.15.175-.315.391-.45.525-.15.15-.306.315-.132.614.175.299.778 1.285 1.671 2.081 1.147 1.022 2.115 1.339 2.414 1.489.299.15.474.125.649-.075.175-.2.749-.873.948-1.172.2-.299.399-.25.673-.15s1.746.823 2.045.973c.299.15.499.225.574.35.074.125.074.723-.17 1.411z"/></svg>
-            <span>Ask a Question on WhatsApp</span>
-          </a>
+    <section id="assessment" class="home-section home-assessment" aria-labelledby="assessment-heading">
+      <div class="container home-assessment-grid">
+        <div class="home-assessment-copy">
+          <span class="home-kicker">Your first step is free</span>
+          <h2 id="assessment-heading" class="home-heading">Find the right starting level before choosing a plan.</h2>
+          <p class="home-lead">Tell us a little about the student. The academy will use the details to discuss goals, tutor preference, and a suitable US class time.</p>
+          <ul class="home-assessment-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>No payment or card details</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>Male or female tutor preference</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>Flexible timing discussion</li>
+          </ul>
+        </div>
+
+        <div class="home-form-card form-card">
+          <h3>Book a free assessment</h3>
+          <p>Complete the form and we will help with the next step.</p>
+          <form class="js-assessment-form" novalidate>
+            <div class="home-form-grid">
+              <div class="home-field">
+                <label for="home-student-name">Student name *</label>
+                <input id="home-student-name" name="student_name" type="text" autocomplete="name" required>
+              </div>
+              <div class="home-field">
+                <label for="home-parent-name">Parent / adult name *</label>
+                <input id="home-parent-name" name="parent_name" type="text" autocomplete="name" required>
+              </div>
+              <div class="home-field">
+                <label for="home-phone">Phone / WhatsApp *</label>
+                <input id="home-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+              </div>
+              <div class="home-field">
+                <label for="home-email">Email *</label>
+                <input id="home-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+              </div>
+              <div class="home-field">
+                <label for="home-age">Student age *</label>
+                <select id="home-age" name="student_age" required>
+                  <option value="">Select age group</option>
+                  <option value="5-7">5–7 years</option>
+                  <option value="8-12">8–12 years</option>
+                  <option value="13-17">13–17 years</option>
+                  <option value="18+">18+ adult</option>
+                </select>
+              </div>
+              <div class="home-field">
+                <label for="home-program">Program interest</label>
+                <select id="home-program" name="program">
+                  <option value="">Help me choose</option>
+                  <option value="Noorani Qaida">Noorani Qaida</option>
+                  <option value="Quran Reading">Quran Reading</option>
+                  <option value="Quran with Tajweed">Quran with Tajweed</option>
+                  <option value="Quran Memorization">Quran Memorization / Hifz</option>
+                  <option value="Islamic Studies">Islamic Studies for Kids</option>
+                </select>
+              </div>
+              <div class="home-field">
+                <label for="home-tutor">Tutor preference</label>
+                <select id="home-tutor" name="tutor_preference">
+                  <option value="No preference">No preference</option>
+                  <option value="Male tutor">Male tutor</option>
+                  <option value="Female tutor">Female tutor</option>
+                </select>
+              </div>
+              <div class="home-field">
+                <label for="home-zone">US time zone</label>
+                <select id="home-zone" name="time_zone">
+                  <option value="">Select time zone</option>
+                  <option value="Eastern">Eastern (ET)</option>
+                  <option value="Central">Central (CT)</option>
+                  <option value="Mountain">Mountain (MT)</option>
+                  <option value="Pacific">Pacific (PT)</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="home-field home-field--full">
+                <label for="home-time">Preferred class window</label>
+                <select id="home-time" name="preferred_time">
+                  <option value="">Choose a preferred window</option>
+                  <option value="Weekday morning">Weekday morning</option>
+                  <option value="Weekday afternoon">Weekday afternoon</option>
+                  <option value="Weekday evening">Weekday evening</option>
+                  <option value="Weekend">Weekend</option>
+                </select>
+              </div>
+              <div class="home-field home-field--full">
+                <button class="btn btn-primary home-form-submit" type="submit">Request My Free Assessment</button>
+                <p class="home-form-privacy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Your information is used only to respond to this assessment request.</p>
+                <div id="form-status-message" class="form-status" role="status" aria-live="polite"></div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Sticky Mobile Bottom Action Bar -->
-  <div class="mobile-bottom-bar" aria-label="Quick Mobile Actions">
-    <a href="#" class="btn btn-whatsapp js-whatsapp-btn" data-whatsapp-msg="Assalamu Alaikum! I'd like to ask a question about Quran classes.">
-      <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2c-5.517 0-9.993 4.476-9.993 9.993 0 1.763.459 3.483 1.332 5.006l-1.417 5.178 5.299-1.39c1.472.803 3.136 1.226 4.779 1.226 5.517 0 9.993-4.476 9.993-9.993 0-5.517-4.476-9.993-9.993-9.993zm5.834 14.175c-.244.688-1.226 1.282-1.996 1.442-.533.111-1.227.2-3.571-.77-2.997-1.24-4.93-4.29-5.08-4.489-.15-.198-1.222-1.626-1.222-3.1 0-1.474.773-2.2 1.047-2.5.274-.3.598-.375.798-.375.2 0 .399.002.573.01.187.008.437-.071.685.525.25.599.848 2.072.923 2.222.075.15.125.324.025.524-.099.2-.149.324-.299.499-.15.175-.315.391-.45.525-.15.15-.306.315-.132.614.175.299.778 1.285 1.671 2.081 1.147 1.022 2.115 1.339 2.414 1.489.299.15.474.125.649-.075.175-.2.749-.873.948-1.172.2-.299.399-.25.673-.15s1.746.823 2.045.973c.299.15.499.225.574.35.074.125.074.723-.17 1.411z"/></svg>
-      <span>WhatsApp</span>
-    </a>
-    <a href="/free-assessment/" class="btn btn-primary">Free Assessment</a>
+  <div class="home-mobile-cta" aria-label="Quick assessment action">
+    <span>Free assessment<br>No card required</span>
+    <a href="#assessment" class="btn btn-primary">Book Assessment</a>
   </div>
 
-  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" aria-label="QuranCrest Academy Home">
-            <img src="/assets/images/logo.svg" alt="QuranCrest Academy" width="220" height="42" style="filter: brightness(0) invert(1);">
-          </a>
-          <p>
-            QuranCrest Academy provides live one-to-one online Quran classes for children, adults, and families across the United States.
-          </p>
+          <a href="/" aria-label="QuranCrest Academy home"><img src="/assets/images/logo.svg" alt="QuranCrest Academy" width="220" height="42" style="filter:brightness(0) invert(1)"></a>
+          <p>Live one-to-one online Quran classes for children, adults, and families across the United States.</p>
         </div>
-
         <div>
-          <h4 class="footer-col-title">Navigation</h4>
+          <h4 class="footer-col-title">Explore</h4>
           <ul class="footer-links">
             <li><a href="/" class="footer-link">Home</a></li>
             <li><a href="/online-quran-classes-usa/" class="footer-link">USA Quran Classes</a></li>
             <li><a href="/courses/" class="footer-link">Quran Programs</a></li>
             <li><a href="/pricing/" class="footer-link">Monthly Plans</a></li>
-            <li><a href="/free-assessment/" class="footer-link">Free Assessment</a></li>
+            <li><a href="#assessment" class="footer-link">Free Assessment</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="footer-col-title">Programs</h4>
           <ul class="footer-links">
@@ -639,25 +1397,21 @@
             <li><a href="/courses/#islamic-studies" class="footer-link">Islamic Studies</a></li>
           </ul>
         </div>
-
         <div>
-          <h4 class="footer-col-title">Trust &amp; Safety</h4>
+          <h4 class="footer-col-title">Academy</h4>
           <ul class="footer-links">
             <li><a href="/child-safety/" class="footer-link">Child Safety Standards</a></li>
-            <li><a href="/about/" class="footer-link">About Our Academy</a></li>
-            <li><a href="/contact/" class="footer-link">Contact Support</a></li>
+            <li><a href="/about/" class="footer-link">About</a></li>
+            <li><a href="/contact/" class="footer-link">Contact</a></li>
             <li><a href="/privacy-policy/" class="footer-link">Privacy Policy</a></li>
             <li><a href="/terms/" class="footer-link">Terms of Service</a></li>
             <li><a href="/refund-policy/" class="footer-link">Refund Policy</a></li>
           </ul>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>&copy; <span id="copyright-year">2026</span> QuranCrest Academy. All rights reserved. Serving students and families across the United States.</p>
-        <p class="footer-disclaimer">
-          QuranCrest Academy operates as an online learning platform. Serving students across US time zones.
-        </p>
+        <p>&copy; <span id="copyright-year">2026</span> QuranCrest Academy. All rights reserved.</p>
+        <p class="footer-disclaimer">Online learning platform serving students across US time zones.</p>
       </div>
     </div>
   </footer>
