@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60" role="img" aria-labelledby="title">
+  <title id="title">QuranCrest Academy</title>
+  <g transform="translate(8 7)"><path d="M5 29C5 12 18 2 30 2s25 10 25 27C46 17 38 12 30 12S14 17 5 29Z" fill="#d7bd86"/><path d="M12 37c8-4 16-2 18 2V18c-3-3-11-5-18-1Z" fill="#f5eee0"/><path d="M48 37c-8-4-16-2-18 2V18c3-3 11-5 18-1Z" fill="#dcebe3"/><path d="m22 42 8-6 8 6-8-4Z" fill="#d7bd86"/></g>
+  <text x="73" y="32" font-family="Georgia, serif" font-weight="700" font-size="22" fill="#ffffff">QuranCrest</text><text x="74" y="48" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="#d7bd86" letter-spacing="2.2">ACADEMY</text>
+</svg>
