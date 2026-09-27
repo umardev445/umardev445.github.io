@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220" width="800" height="220" role="img" aria-label="Quran Learning Pathway Diagram">
+  <defs>
+    <linearGradient id="pathLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F766E" />
+      <stop offset="50%" stop-color="#C8A96B" />
+      <stop offset="100%" stop-color="#0B1F33" />
+    </linearGradient>
+    <filter id="pathShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0B1F33" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Connecting Line -->
+  <path d="M 80 80 L 720 80" stroke="url(#pathLine)" stroke-width="6" stroke-linecap="round" stroke-dasharray="10 6"/>
+
+  <!-- Step 1: Assessment -->
+  <g transform="translate(80, 80)" filter="url(#pathShadow)">
+    <circle cx="0" cy="0" r="28" fill="#0F766E" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="0" y="5" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">1</text>
+    <rect x="-60" y="42" width="120" height="70" rx="8" fill="#FFFFFF" stroke="#DCE5E4"/>
+    <text x="0" y="62" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0B1F33" text-anchor="middle">Assessment</text>
+    <text x="0" y="78" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">Free Evaluation</text>
+    <text x="0" y="92" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">&amp; Goal Setting</text>
+  </g>
+
+  <!-- Step 2: Foundation -->
+  <g transform="translate(240, 80)" filter="url(#pathShadow)">
+    <circle cx="0" cy="0" r="28" fill="#0F766E" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="0" y="5" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">2</text>
+    <rect x="-60" y="42" width="120" height="70" rx="8" fill="#FFFFFF" stroke="#DCE5E4"/>
+    <text x="0" y="62" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0B1F33" text-anchor="middle">Foundation</text>
+    <text x="0" y="78" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">Arabic Letters</text>
+    <text x="0" y="92" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">&amp; Qaida Rules</text>
+  </g>
+
+  <!-- Step 3: Fluent Reading -->
+  <g transform="translate(400, 80)" filter="url(#pathShadow)">
+    <circle cx="0" cy="0" r="28" fill="#C8A96B" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="0" y="5" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">3</text>
+    <rect x="-60" y="42" width="120" height="70" rx="8" fill="#FFFFFF" stroke="#DCE5E4"/>
+    <text x="0" y="62" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0B1F33" text-anchor="middle">Fluent Reading</text>
+    <text x="0" y="78" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">Guided Recitation</text>
+    <text x="0" y="92" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">&amp; Flow Practice</text>
+  </g>
+
+  <!-- Step 4: Tajweed -->
+  <g transform="translate(560, 80)" filter="url(#pathShadow)">
+    <circle cx="0" cy="0" r="28" fill="#0B1F33" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="0" y="5" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">4</text>
+    <rect x="-60" y="42" width="120" height="70" rx="8" fill="#FFFFFF" stroke="#DCE5E4"/>
+    <text x="0" y="62" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0B1F33" text-anchor="middle">Tajweed Rules</text>
+    <text x="0" y="78" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">Pronunciation</text>
+    <text x="0" y="92" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">&amp; Precise Phonetics</text>
+  </g>
+
+  <!-- Step 5: Advanced / Hifz -->
+  <g transform="translate(720, 80)" filter="url(#pathShadow)">
+    <circle cx="0" cy="0" r="28" fill="#0B1F33" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="0" y="5" font-family="Inter, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">5</text>
+    <rect x="-60" y="42" width="120" height="70" rx="8" fill="#FFFFFF" stroke="#DCE5E4"/>
+    <text x="0" y="62" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#0B1F33" text-anchor="middle">Memorization</text>
+    <text x="0" y="78" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">Hifz &amp; Revision</text>
+    <text x="0" y="92" font-family="Inter, sans-serif" font-size="9" fill="#5E6B73" text-anchor="middle">or Islamic Studies</text>
+  </g>
+</svg>
