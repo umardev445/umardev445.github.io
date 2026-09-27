@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       panel=document.createElement('div');
       panel.className='static-mobile-nav';
       panel.hidden=true;
-      panel.innerHTML='<nav aria-label="Mobile navigation"><a href="/courses/">Courses</a><a href="/tutors/">Tutors</a><a href="/pricing/">Pricing</a><a href="/locations/">Locations</a><a href="/resources/">Resources</a><a href="/blog/">Blog</a><a href="/about/">About</a><a class="button" href="/free-assessment/">Free assessment</a></nav>';
+      const urdu=document.documentElement.lang.toLowerCase().startsWith('ur');
+      panel.innerHTML=urdu
+        ? '<nav aria-label="موبائل رہنمائی" dir="rtl"><a href="/ur/courses/">کورسز</a><a href="/tutors/">اساتذہ</a><a href="/pricing/">فیس</a><a href="/ur/resources/">رہنمائی</a><a href="/child-safety/">بچوں کا تحفظ</a><a href="/ur/contact/">رابطہ</a><a class="button" href="/ur/contact/">مفت جائزہ</a></nav>'
+        : '<nav aria-label="Mobile navigation"><a href="/courses/">Courses</a><a href="/tutors/">Tutors</a><a href="/pricing/">Pricing</a><a href="/locations/">Locations</a><a href="/resources/">Resources</a><a href="/blog/">Blog</a><a href="/about/">About</a><a class="button" href="/free-assessment/">Free assessment</a></nav>';
       header.appendChild(panel);
     }
     button.addEventListener('click',()=>{
