@@ -1,126 +1,84 @@
 # QuranCrest Academy Website
 
-A production-ready, mobile-first, high-converting static website for **QuranCrest Academy** — offering live one-to-one online Quran classes for kids, adults, and families across the United States.
+Static, mobile-friendly website for [qurancrest.com](https://qurancrest.com), with English and Urdu pages, one-to-one Quran course information, policies, location guides, blog articles and practical learning tools.
 
----
+## What is included
 
-## 📁 Directory Structure
+- 41 indexable URLs in `sitemap.xml`
+- Eight detailed course pages
+- Seven long-form learning articles
+- Five practical resource pages with browser-based tools or checklists
+- Full Urdu home, courses, resources and contact pages
+- Distinct USA and Australia location guides
+- About, tutor, pricing, child-safety, privacy, terms, refund and contact pages
+- A noindex thank-you page and noindex custom 404 page
+
+## New free resources
+
+1. `/resources/quran-learning-level-check/`
+2. `/resources/weekly-quran-practice-planner/`
+3. `/resources/first-online-quran-lesson-checklist/`
+4. `/resources/common-quran-reading-mistakes/`
+5. `/resources/hifz-revision-planner/`
+
+The interactive answers are calculated in the visitor's browser. They are not submitted unless the visitor separately uses a contact or assessment form.
+
+## Main folders
 
 ```text
 qurancrest/
-├── index.html                       # Primary Homepage & Conversion Funnel
-├── online-quran-classes-usa/
-│   └── index.html                   # Dedicated USA Landing Page for Google Search Ads
-├── courses/
-│   └── index.html                   # Detailed Quran Courses & Curriculum Breakdown
-├── pricing/
-│   └── index.html                   # Transparent Monthly Fee Plans ($29 - $79/mo)
-├── free-assessment/
-│   └── index.html                   # Dedicated Free Assessment Booking Page
-├── about/
-│   └── index.html                   # About QuranCrest Academy & Educational Mission
-├── contact/
-│   └── index.html                   # Contact Page with WhatsApp & Email Support
-├── thank-you/
-│   └── index.html                   # Post-Submission Conversion Confirmation Page
-├── privacy-policy/
-│   └── index.html                   # Privacy Policy & COPPA Child Privacy Standards
-├── terms/
-│   └── index.html                   # Terms of Service & Attendance Guidelines
-├── refund-policy/
-│   └── index.html                   # Refund & Monthly Cancellation Policy
-├── child-safety/
-│   └── index.html                   # Child Safety & Parent Monitoring Standards
-├── assets/
-│   ├── css/
-│   │   └── styles.css               # Master Mobile-First Stylesheet (Tailwind-compatible variables)
-│   ├── js/
-│   │   ├── config.js                # Central Editable Business Configuration
-│   │   ├── main.js                  # Navigation, Drawer, Accordion & Dynamic WhatsApp links
-│   │   └── form.js                  # Form validation, submission handling & GA4/Ads conversions
-│   ├── images/
-│   │   ├── logo.svg                 # QuranCrest SVG Brand Logo
-│   │   ├── hero-illustration.svg    # Virtual Classroom & US Timezone SVG Illustration
-│   │   └── learning-path.svg        # Step-by-Step Learning Pathway SVG Diagram
-│   └── icons/
-├── robots.txt                       # Search Engine Crawling Instructions
-├── sitemap.xml                      # Complete XML Sitemap
-├── manifest.webmanifest             # Web Application Manifest
-├── favicon.svg                      # Brand Favicon Icon
-├── 404.html                         # Custom 404 Error Page
-├── _headers                         # Cloudflare Pages Security & Cache Headers
-├── _redirects                       # Cloudflare Pages Clean Redirect Rules
-├── server.mjs                       # Dependency-free Local Preview Server
-└── README.md                        # Documentation & Deployment Instructions
+├── assets/                     # CSS, JavaScript and site images
+├── blog/                       # Learning articles
+├── content/quality-pages/      # Source fragments for the five resources
+├── courses/                    # Course landing pages
+├── dist/                       # Ready-to-upload website
+├── resources/                  # Resource hub, tools and guides
+├── scripts/                    # Reproducible site refresh scripts
+├── ur/                         # Urdu pages
+├── index.html                  # Homepage
+├── sitemap.xml                 # 41 indexable URLs
+└── package.json                # Local preview, checks and build commands
 ```
 
----
+## Local preview and build
 
-## ⚙️ How to Update Business Settings
-
-All customizable business variables are located in **`assets/js/config.js`**:
-
-```javascript
-window.QURANCREST_CONFIG = {
-  brandName: "QuranCrest Academy",
-  websiteUrl: "https://qurancrest.com",
-  targetCountry: "United States",
-  
-  // Update with live WhatsApp phone number (with country code, no symbols)
-  whatsappNumber: "+15550192834", 
-  
-  // Support Email
-  contactEmail: "info@qurancrest.com",
-  
-  // Form Endpoint (e.g., Formspree URL)
-  formEndpoint: "https://formspree.io/f/YOUR_FORM_ID", 
-  contactFormEndpoint: "https://formspree.io/f/YOUR_CONTACT_FORM_ID",
-  
-  // Google Analytics & Google Ads Conversion IDs
-  gaMeasurementId: "G-XXXXXXXXXX",
-  googleAdsId: "AW-XXXXXXXXX",
-  googleAdsConversionLabel: "XXXXXXXXXXXX"
-};
-```
-
-When updated in `assets/js/config.js`, all WhatsApp buttons, form actions, and tracking tags automatically adapt across every page on the website.
-
----
-
-## 🚀 Local Development
-
-To run locally with Node.js:
+Node.js is the only runtime needed.
 
 ```bash
-# Start local server on port 3000
+npm run check
+npm run build
 npm run dev
 ```
 
-Open your browser at `http://localhost:3000`. You can also open any `.html` file directly in your browser.
+Open `http://localhost:3000` after starting the preview server.
 
----
+`npm run build` first regenerates the existing SEO articles and location index, then applies the quality refresh. It also copies every updated public page and asset into `dist/`.
 
-## ☁️ Deploying to Cloudflare Pages & Custom Domain
+## Business configuration
 
-1. Push this codebase to a **GitHub Repository**.
-2. Log into your **Cloudflare Dashboard** and navigate to **Workers & Pages**.
-3. Click **Create Application** &rarr; **Pages** &rarr; **Connect to Git**.
-4. Select your `qurancrest` repository.
-5. Set Build settings:
-   - **Framework preset:** None (Static HTML)
-   - **Build command:** *(leave blank)*
-   - **Build output directory:** `.`
-6. Click **Save and Deploy**.
-7. Under **Custom Domains**, add `qurancrest.com`. Cloudflare will automatically provision SSL certificates.
+`assets/js/config.js` contains the live website URL, contact email, WhatsApp number, Formspree endpoint and optional tracking fields. The Google Analytics and Google Ads values are empty until real account IDs are available. Do not enter guessed IDs.
 
----
+Forms currently use:
 
-## 🔒 Security & Performance Features
+- `https://formspree.io/f/mqerrdqj`
+- `umarfarooq360official@gmail.com`
+- WhatsApp number `923421046878`
 
-- **WCAG 2.2 AA Accessibility:** Includes skip links, keyboard-navigable FAQ accordions, high color contrast, visible focus outlines, and screen-reader status regions.
-- **Fast System Fonts:** Utilizes standard system UI font stack (`Inter, system-ui, sans-serif`) with zero render-blocking external font requests.
-- **Pure SVGs:** Vector logo, hero graphic, and pathway diagrams generated locally in clean code.
-- **Premium Mobile UI:** Responsive hero, touch-friendly navigation, refined cards, single mobile CTA bar, and a circular floating WhatsApp control.
-- **Lightweight Motion:** CSS and IntersectionObserver-based reveals with full `prefers-reduced-motion` support.
+Test the form destination from the live domain after deployment.
 
-> Before publishing, replace every `REPLACE_WITH_...` value in `assets/js/config.js`. Forms intentionally do not report a successful lead unless a real endpoint or WhatsApp number is configured.
+## Deployment
+
+Upload the **contents** of `dist/` to the hosting public root. Do not upload the `dist` folder as a nested website directory.
+
+After deployment:
+
+1. Open the homepage, one course, one resource tool, the Urdu contact page and the 404 page.
+2. Submit one test assessment and confirm the Formspree message arrives.
+3. Submit `https://qurancrest.com/sitemap.xml` in Google Search Console.
+4. Request indexing for the homepage and resource hub after the live crawl sees the changes.
+
+## AdSense setup
+
+The package does not contain a guessed `ads.txt` publisher ID or placeholder ad unit. Add `ads.txt` and the AdSense code only from the approved AdSense account. The privacy page already explains cookies, advertising technologies and consent choices in visitor-facing language.
+
+Content quality, navigation and technical SEO have been strengthened, but AdSense approval remains Google's decision and cannot be guaranteed by code changes.

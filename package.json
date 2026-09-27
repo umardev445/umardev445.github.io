@@ -6,6 +6,7 @@
   "description": "Fast, mobile-first static website for QuranCrest Academy.",
   "scripts": {
     "dev": "node server.mjs",
-    "check": "node --check assets/js/config.js && node --check assets/js/main.js && node --check assets/js/form.js"
+    "build": "node scripts/seo-refresh.mjs && node scripts/quality-refresh.mjs",
+    "check": "node --check assets/js/config.js && node --check assets/js/main.js && node --check assets/js/form.js && node --check assets/static-site.js && node --check assets/quality-tools.js && node --check scripts/seo-refresh.mjs && node --check scripts/quality-refresh.mjs"
   }
 }

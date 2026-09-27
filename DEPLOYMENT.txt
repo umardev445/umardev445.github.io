@@ -1,0 +1,13 @@
+QuranCrest deployment package
+
+1. The project root contains the editable source/static website files.
+2. The dist folder contains the ready-to-upload website.
+3. Upload the CONTENTS of the dist folder to the hosting public root.
+4. For GitHub Pages, publish the contents of dist from the selected publishing branch.
+5. The included dist folder was regenerated and validated on 27 September 2026.
+
+No npm build step is required for this supplied package. If source content is edited later,
+run "npm run check" and "npm run build" to refresh and validate dist.
+
+After publishing, test the contact forms and submit https://qurancrest.com/sitemap.xml
+in Google Search Console.
