@@ -1,15 +1,15 @@
 {
-  "name": "QuranCrest Academy",
-  "short_name": "QuranCrest",
-  "description": "Online Quran Classes for Kids & Adults in the United States",
+  "name": "AspireCompass",
+  "short_name": "AspireCompass",
+  "description": "Your global scholarship, internship and early-career opportunity compass.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAF7F0",
-  "theme_color": "#0B1F33",
+  "background_color": "#f7f8f4",
+  "theme_color": "#071a2c",
   "icons": [
     {
       "src": "/favicon.svg",
-      "sizes": "64x64",
+      "sizes": "any",
       "type": "image/svg+xml"
     }
   ]
