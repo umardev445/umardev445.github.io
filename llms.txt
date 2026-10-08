@@ -1,0 +1,58 @@
+# AspireCompass
+
+> AspireCompass is a free scholarship, study-abroad, internship, fellowship, and application-planning resource for international students. It provides researched guides, comparison tools, deadline planning, and direct links to official programme and university sources.
+
+Important notes:
+
+- AspireCompass supports discovery and planning; it does not make official admission, scholarship, visa, credential, or eligibility decisions.
+- Applicants should confirm the current intake, deadline, eligibility rules, required documents, costs, and funding on the linked official source before applying.
+- Scholarship and opportunity statuses can change. A source-check date records when AspireCompass last reviewed the information, not a guarantee that it remains unchanged.
+- Calculator results and grade conversions are planning estimates unless an institution explicitly accepts the same method.
+
+## Core Resources
+
+- [AspireCompass](https://aspirecompass.org/): Start with verified scholarship routes, study-abroad guidance, planning tools, and current opportunities.
+- [Opportunities](https://aspirecompass.org/opportunities/): Browse scholarships, internships, fellowships, exchanges, and graduate programmes by category.
+- [Scholarships](https://aspirecompass.org/scholarships/): Compare international scholarship routes and verify eligibility on official programme sources.
+- [Scholarship Finder](https://aspirecompass.org/matcher/): Build a preliminary shortlist by study level, destination, funding, and current status.
+- [Deadline Calendar](https://aspirecompass.org/deadline-calendar/): Review dated, rolling, and unconfirmed opportunity milestones and then verify the official deadline.
+- [Countries](https://aspirecompass.org/countries/): Explore study and funding routes by destination.
+- [Guides](https://aspirecompass.org/guides/): Find practical guides for scholarship applications, documents, interviews, admissions, and study planning.
+- [Student Tools](https://aspirecompass.org/tools/): Use free calculators and planning tools without creating an account.
+
+## Italy Study and Scholarship Hub
+
+- [Study in Italy](https://aspirecompass.org/countries/italy/): Main route for Italy admissions, scholarships, documents, costs, and visa planning.
+- [Scholarships in Italy](https://aspirecompass.org/scholarships/italy/): Compare Italian government, university, merit, and regional funding routes.
+- [Italy DSU Scholarships](https://aspirecompass.org/guides/italy-dsu-scholarships/): Understand regional scholarship routes, income documentation, ISEE requirements, and separate deadlines.
+- [Italy University Application Deadlines](https://aspirecompass.org/guides/italy-university-application-deadlines/): Compare selected university timelines and applicant-specific application stages.
+- [Italy Admission and English Requirements](https://aspirecompass.org/guides/study-in-italy-admission-english-requirements/): Check admission, IELTS, PTE, prior-English-study, and programme-specific evidence routes.
+- [Italy University Tuition Fees](https://aspirecompass.org/guides/italy-universities-tuition-fees/): Plan tuition, instalments, fee reductions, and foreign-income documents.
+- [Italy Student Visa for Pakistani Students](https://aspirecompass.org/guides/italy-student-visa-pakistan/): Follow admission, Universitaly, appointment, visa-document, and post-arrival steps.
+- [Cost of Living in Italy](https://aspirecompass.org/guides/cost-of-living-in-italy-for-students/): Separate monthly expenses from tuition, deposits, travel, and arrival costs.
+- [CIMEA vs Declaration of Value](https://aspirecompass.org/guides/cimea-vs-declaration-of-value-italy/): Confirm which foreign-qualification recognition document the university requests.
+- [ISEE Parificato](https://aspirecompass.org/guides/isee-parificato-international-students/): Prepare foreign household, income, asset, translation, and legalisation documents.
+- [Universitaly Pre-enrolment](https://aspirecompass.org/guides/universitaly-pre-enrolment/): Understand the university-validation and visa pre-enrolment sequence.
+- [University of Padua Admissions and Scholarships](https://aspirecompass.org/guides/university-of-padua-admissions-scholarships/): Review application calls, English evidence, tuition, and scholarship routes.
+- [Politecnico di Milano Master's Admissions](https://aspirecompass.org/guides/politecnico-di-milano-masters-admissions/): Review foreign-qualification admission stages, dates, language evidence, and merit scholarship actions.
+- [University of Bologna Admissions and Scholarships](https://aspirecompass.org/guides/university-of-bologna-admissions-scholarships/): Review programme admission, fees, ER.GO benefits, and international funding routes.
+- [Italy Study Cost Calculator](https://aspirecompass.org/tools/italy-study-cost-calculator/): Estimate tuition, living costs, arrival expenses, and the remaining funding gap.
+
+## Calculators and Application Guides
+
+- [GPA and CGPA Calculator](https://aspirecompass.org/tools/gpa-cgpa-calculator/): Calculate a credit-weighted GPA, estimate scale conversions, and plan a target GPA.
+- [IELTS Band Calculator](https://aspirecompass.org/tools/ielts-band-calculator/): Estimate an overall IELTS band and distinguish it from minimum component requirements.
+- [Scholarship Application Guide](https://aspirecompass.org/guides/scholarship-application/): Build an eligibility-first shortlist, evidence bank, document tracker, and submission plan.
+- [Motivation Letter Guide](https://aspirecompass.org/guides/motivation-letter/): Connect programme motivation to specific evidence and future goals.
+- [Statement of Purpose Guide](https://aspirecompass.org/guides/statement-of-purpose/): Structure academic background, programme fit, evidence, and a credible study plan.
+- [Scholarship CV Guide](https://aspirecompass.org/guides/scholarship-cv/): Arrange education, experience, leadership, achievements, and skills around selection criteria.
+- [Recommendation Letter Guide](https://aspirecompass.org/guides/recommendation-letter/): Plan the referee request and provide evidence that supports a specific recommendation.
+- [Scholarship Interview Guide](https://aspirecompass.org/guides/scholarship-interview/): Prepare concise, evidence-based answers and programme-specific questions.
+- [Scholarships Without IELTS](https://aspirecompass.org/guides/scholarships-without-ielts/): Separate scholarship, university-admission, and visa English-language requirements.
+
+## About and Editorial Standards
+
+- [About AspireCompass](https://aspirecompass.org/about/): Learn the website's purpose, scope, and official-source approach.
+- [Editorial Policy](https://aspirecompass.org/editorial-policy/): Read how information is researched, dated, sourced, updated, and corrected.
+- [Contact AspireCompass](https://aspirecompass.org/contact/): Submit questions, corrections, or source updates.
+- [Disclaimer](https://aspirecompass.org/disclaimer/): Understand the limits of summaries, calculators, and planning guidance.
