@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aspirecompass.org/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -37,7 +37,7 @@
 
   <url>
     <loc>https://aspirecompass.org/countries/germany/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -47,7 +47,7 @@
 
   <url>
     <loc>https://aspirecompass.org/countries/italy/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -116,6 +116,16 @@
   </url>
 
   <url>
+    <loc>https://aspirecompass.org/guides/germany-student-visa-requirements/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://aspirecompass.org/guides/germany-university-application-deadlines/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+
+  <url>
     <loc>https://aspirecompass.org/guides/internship-application/</loc>
     <lastmod>2026-10-06</lastmod>
   </url>
@@ -127,7 +137,7 @@
 
   <url>
     <loc>https://aspirecompass.org/guides/italy-dsu-scholarships/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -142,7 +152,7 @@
 
   <url>
     <loc>https://aspirecompass.org/guides/italy-university-application-deadlines/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -172,7 +182,7 @@
 
   <url>
     <loc>https://aspirecompass.org/guides/scholarship-application/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -192,7 +202,7 @@
 
   <url>
     <loc>https://aspirecompass.org/guides/scholarships-without-ielts/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -201,8 +211,13 @@
   </url>
 
   <url>
+    <loc>https://aspirecompass.org/guides/study-in-germany-admission-requirements/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+
+  <url>
     <loc>https://aspirecompass.org/guides/study-in-italy-admission-english-requirements/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -222,7 +237,7 @@
 
   <url>
     <loc>https://aspirecompass.org/internships/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -242,7 +257,7 @@
 
   <url>
     <loc>https://aspirecompass.org/opportunities/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -257,7 +272,7 @@
 
   <url>
     <loc>https://aspirecompass.org/scholarships/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -267,7 +282,7 @@
 
   <url>
     <loc>https://aspirecompass.org/scholarships/chevening/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -277,7 +292,7 @@
 
   <url>
     <loc>https://aspirecompass.org/scholarships/daad-epos/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -288,6 +303,11 @@
   <url>
     <loc>https://aspirecompass.org/scholarships/fully-funded/</loc>
     <lastmod>2026-10-06</lastmod>
+  </url>
+
+  <url>
+    <loc>https://aspirecompass.org/scholarships/germany/</loc>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -302,7 +322,7 @@
 
   <url>
     <loc>https://aspirecompass.org/scholarships/lester-b-pearson/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
@@ -327,12 +347,17 @@
 
   <url>
     <loc>https://aspirecompass.org/tools/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://aspirecompass.org/tools/germany-blocked-account-calculator/</loc>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>
     <loc>https://aspirecompass.org/tools/gpa-cgpa-calculator/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-08</lastmod>
   </url>
 
   <url>

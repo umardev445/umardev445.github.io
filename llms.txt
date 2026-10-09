@@ -38,6 +38,15 @@ Important notes:
 - [University of Bologna Admissions and Scholarships](https://aspirecompass.org/guides/university-of-bologna-admissions-scholarships/): Review programme admission, fees, ER.GO benefits, and international funding routes.
 - [Italy Study Cost Calculator](https://aspirecompass.org/tools/italy-study-cost-calculator/): Estimate tuition, living costs, arrival expenses, and the remaining funding gap.
 
+## Germany Study, Funding, and Visa Hub
+
+- [Study in Germany](https://aspirecompass.org/countries/germany/): Connect scholarships, admission routes, university deadlines, visa evidence, and the first-year budget.
+- [Scholarships in Germany](https://aspirecompass.org/scholarships/germany/): Compare DAAD, university, foundation, and paid research funding routes.
+- [Germany Admission Requirements](https://aspirecompass.org/guides/study-in-germany-admission-requirements/): Identify direct, uni-assist, VPD, qualification, language, and document requirements.
+- [Germany University Deadlines](https://aspirecompass.org/guides/germany-university-application-deadlines/): Plan winter and summer applications without treating common dates as universal deadlines.
+- [Germany Student Visa Requirements](https://aspirecompass.org/guides/germany-student-visa-requirements/): Organise admission, proof of funds, insurance, mission, and portal evidence.
+- [Germany Blocked Account Calculator](https://aspirecompass.org/tools/germany-blocked-account-calculator/): Estimate the blocked deposit, provider fees, monthly expenses, and first-year funding need without double-counting the deposit.
+
 ## Calculators and Application Guides
 
 - [GPA and CGPA Calculator](https://aspirecompass.org/tools/gpa-cgpa-calculator/): Calculate a credit-weighted GPA, estimate scale conversions, and plan a target GPA.
