@@ -17,7 +17,17 @@ document.addEventListener('DOMContentLoaded',()=>{
       const opening=panel.hidden;
       panel.hidden=!opening;
       button.setAttribute('aria-expanded',String(opening));
-      button.setAttribute('aria-label',opening?'Close menu':'Open menu');
+      const urdu=document.documentElement.lang.toLowerCase().startsWith('ur');
+      button.setAttribute('aria-label',urdu?(opening?'مینو بند کریں':'مینو کھولیں'):(opening?'Close menu':'Open menu'));
+    });
+    const close=()=>{
+      panel.hidden=true;
+      button.setAttribute('aria-expanded','false');
+      button.setAttribute('aria-label',document.documentElement.lang.toLowerCase().startsWith('ur')?'مینو کھولیں':'Open menu');
+    };
+    panel.querySelectorAll('a').forEach(link=>link.addEventListener('click',close));
+    document.addEventListener('keydown',event=>{
+      if(event.key==='Escape'&&!panel.hidden){close();button.focus();}
     });
   });
   document.querySelectorAll('[data-slot="accordion-trigger"]').forEach(button=>{

@@ -1,0 +1,17 @@
+.phase2-learning .article-body h3{margin-top:1.8rem;color:#123b31}
+.phase2-learning .article-body p{line-height:1.8}
+.phase2-learning .article-body a{color:#0b6b51;text-decoration:underline;text-underline-offset:3px}
+.lesson-table-wrap{max-width:100%;overflow-x:auto;margin:1.4rem 0;border:1px solid #dbe6e1;border-radius:14px;background:#fff}
+.lesson-table-wrap:focus-visible{outline:3px solid #d6a84b;outline-offset:3px}
+.lesson-table{width:100%;min-width:520px;border-collapse:collapse;font-size:.96rem}
+.lesson-table caption{text-align:left;font-weight:750;color:#123b31;padding:1rem}
+.lesson-table th,.lesson-table td{padding:.85rem 1rem;text-align:left;vertical-align:top;border-bottom:1px solid #dbe6e1;line-height:1.65}
+.lesson-table thead th{background:#0b4d3b;color:#fff}
+.lesson-table tbody th{font-weight:650;background:#f5faf7;min-width:130px}
+.lesson-table tr:last-child td,.lesson-table tr:last-child th{border-bottom:0}
+.lesson-sample{border-left:4px solid #d6a84b;background:#fffaf0;border-radius:0 16px 16px 0;padding:1.3rem 1.5rem;margin:1.5rem 0}
+.lesson-sample h3{margin-top:0!important}.lesson-caption{font-size:.9rem;color:#53645f}
+.letter-practice{padding:1.2rem 1.5rem;border:1px solid #dbe6e1;border-radius:16px;background:#f5faf7;margin:1.4rem 0}
+.letter-practice>span{display:block;font-size:2.6rem;line-height:1.9;text-align:center;color:#0b4d3b}
+@media(max-width:600px){.lesson-table{font-size:.9rem}.lesson-table th,.lesson-table td{padding:.7rem}.lesson-sample{padding:1rem}.phase2-learning .resource-links{gap:.75rem}}
+@media print{.lesson-table-wrap{overflow:visible;border-radius:0}.lesson-table{min-width:0;font-size:10pt}.lesson-sample{break-inside:avoid}}

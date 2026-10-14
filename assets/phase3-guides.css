@@ -1,0 +1,9 @@
+.phase3-guide h2{margin-top:2rem;color:#123b31}.phase3-guide h3{margin-top:1.5rem;color:#123b31}
+.phase3-guide .article-body p,.phase3-guide .article-body li{line-height:1.8}
+.phase3-guide .article-body a{color:#0b6b51;text-decoration:underline;text-underline-offset:3px}
+.phase3-guide .letter-practice>span{font-size:clamp(1.35rem,4vw,2rem);line-height:2.2;overflow-wrap:anywhere}
+.practice-checklist{border:1px solid #dbe6e1;border-radius:16px;padding:1rem;margin:1rem 0;background:#f7fbf8}
+.practice-checklist label{display:flex;align-items:flex-start;gap:.75rem;padding:.65rem 0;cursor:pointer}
+.practice-checklist input{accent-color:#0b6b51;flex-shrink:0;margin-top:.4rem;width:1.05rem;height:1.05rem}
+.phase3-guide .tool-actions{align-items:center}.phase3-guide .tool-actions p{flex:1;min-width:200px}
+@media print{.phase3-guide .quality-meta{display:block}.phase3-guide{padding:0!important}.practice-checklist,.letter-practice{break-inside:avoid}.phase3-guide .article-body a{color:#000}.phase3-guide details{display:block}.phase3-guide details>p{display:block!important}.phase3-guide .lesson-table thead th{background:#eee;color:#000}}

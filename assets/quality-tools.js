@@ -47,13 +47,15 @@ document.addEventListener('DOMContentLoaded',()=>{
       const data=new FormData(practiceForm);
       const days=Math.max(2,Math.min(7,Number(data.get('days')||5)));
       const minutes=Math.max(10,Math.min(60,Number(data.get('minutes')||20)));
-      const goal=String(data.get('goal')||'reading');
-      const level=String(data.get('level')||'beginner');
+      const selectedGoal=String(data.get('goal')||'reading');
+      const goal=['qaida','reading','tajweed','hifz'].includes(selectedGoal)?selectedGoal:'reading';
+      const selectedLevel=String(data.get('level')||'beginner');
+      const level=['beginner','developing','independent'].includes(selectedLevel)?selectedLevel:'beginner';
       const labels=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
       const goalNames={qaida:'Qaida accuracy',reading:'Quran reading fluency',tajweed:'Tajweed application',hifz:'Memorization and revision'};
       const warm=Math.max(2,Math.round(minutes*.2));
       const main=Math.max(5,Math.round(minutes*.55));
-      const review=Math.max(3,minutes-warm-main);
+      const review=minutes-warm-main;
       let rows='';
       for(let i=0;i<days;i++){
         const focus=i===days-1?'Weekly review and note questions for the tutor':`${goalNames[goal]} practice at ${level} level`;
@@ -74,11 +76,14 @@ document.addEventListener('DOMContentLoaded',()=>{
       const minutes=Math.max(20,Math.min(120,Number(data.get('minutes')||45)));
       const stage=String(data.get('stage')||'active');
       const labels=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-      let split=stage==='new'? [.45,.3,.25] : stage==='revision'? [.15,.35,.5] : [.3,.35,.35];
+      const split=stage==='new'? [.45,.3,.25] : stage==='revision'? [.15,.35,.5] : [.3,.35,.35];
+      const sabaq=Math.round(minutes*split[0]);
+      const sabaqi=Math.round(minutes*split[1]);
+      const manzil=minutes-sabaq-sabaqi;
       let rows='';
       for(let i=0;i<days;i++){
         const rest=i===days-1;
-        rows+=`<tr><td>${labels[i]}</td><td>${rest?'No new portion; correct weak lines':Math.round(minutes*split[0])+' min: teacher-set new portion'}</td><td>${Math.round(minutes*split[1])} min: recent lessons</td><td>${Math.round(minutes*split[2])} min: older revision</td><td>${rest?'Weekly error review':'Record repeated errors'}</td></tr>`;
+        rows+=`<tr><td>${labels[i]}</td><td>${sabaq} min: ${rest?'no new portion; correct weak lines':'teacher-set new portion'}</td><td>${sabaqi} min: recent lessons</td><td>${manzil} min: older revision</td><td>${rest?'Weekly error review':'Record repeated errors'}</td></tr>`;
       }
       const out=hifzForm.querySelector('[data-hifz-output]');
       out.innerHTML=`<h3>Your revision framework</h3><div class="comparison-wrap"><table class="planner-table"><thead><tr><th>Day</th><th>Sabaq</th><th>Sabaqi</th><th>Manzil</th><th>Note</th></tr></thead><tbody>${rows}</tbody></table></div><p class="planner-note">This tool divides available time; it does not decide how many lines or pages you should memorize. Your teacher should set the actual portions after listening to accuracy and recall.</p>`;
