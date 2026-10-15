@@ -30,19 +30,6 @@ document.addEventListener('DOMContentLoaded',()=>{
       if(event.key==='Escape'&&!panel.hidden){close();button.focus();}
     });
   });
-  document.querySelectorAll('[data-slot="accordion-trigger"]').forEach(button=>{
-    const item=button.closest('[data-slot="accordion-item"]');
-    const content=item&&item.querySelector('[data-slot="accordion-content"]');
-    if(!content)return;
-    content.hidden=true;
-    content.style.display='none';
-    button.addEventListener('click',()=>{
-      const opening=content.hidden;
-      content.hidden=!opening;
-      content.style.display=opening?'block':'none';
-      button.setAttribute('aria-expanded',String(opening));
-      button.dataset.state=opening?'open':'closed';
-      content.dataset.state=opening?'open':'closed';
-    });
-  });
+  // FAQ answers are static HTML in native details/summary disclosures.
+  // Opening, closing and keyboard support do not depend on this script.
 });

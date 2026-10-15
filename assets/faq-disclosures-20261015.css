@@ -1,0 +1,10 @@
+.faq-list .faq-disclosure{border:1px solid #dbe6e1;border-radius:14px;margin:.8rem 0;background:#fff;overflow:visible}
+.faq-list .faq-summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;list-style:none;padding:1.15rem 1.3rem;font-weight:650;color:#123b31;cursor:pointer;line-height:1.6}
+.faq-list .faq-summary::-webkit-details-marker{display:none}.faq-list .faq-summary::marker{content:""}
+.faq-list .faq-summary svg{flex:0 0 20px;transition:transform .15s ease}
+.faq-list .faq-summary:hover{background:#f5faf7}.faq-list .faq-summary:focus-visible{outline:3px solid #d6a84b;outline-offset:2px;border-radius:12px}
+.faq-list .faq-disclosure[open]>.faq-summary svg{transform:rotate(180deg)}
+.faq-list .faq-answer{padding:0 1.3rem 1.25rem;color:#53645f;line-height:1.85;overflow-wrap:anywhere}
+.faq-list .faq-answer p{margin:0;max-width:none}
+@media(max-width:600px){.faq-list .faq-summary{padding:1rem;font-size:1rem}.faq-list .faq-answer{padding:0 1rem 1rem}}
+@media(prefers-reduced-motion:reduce){.faq-list .faq-summary svg{transition:none}}
