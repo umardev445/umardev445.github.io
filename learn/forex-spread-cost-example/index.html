@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Consent-first analytics bootstrap. The external GA library loads only after opt-in. -->
+    <script>
+      (() => {
+        const measurementId = "G-D95T0FNX16";
+        const choiceKey = "cs_analytics_choice";
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gtag("consent", "default", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          wait_for_update: 500
+        });
+        window.__csAnalyticsChoice = () => {
+          try { return window.localStorage.getItem(choiceKey); } catch (_) { return null; }
+        };
+        window.__csLoadAnalytics = () => {
+          if (document.querySelector("script[data-cs-analytics]")) return;
+          const tag = document.createElement("script");
+          tag.async = true;
+          tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+          tag.dataset.csAnalytics = "";
+          document.head.append(tag);
+          window.gtag("js", new Date());
+          window.gtag("config", measurementId);
+        };
+        window.__csSetAnalyticsConsent = (choice) => {
+          const allowed = choice === "allowed";
+          try { window.localStorage.setItem(choiceKey, allowed ? "allowed" : "denied"); } catch (_) {}
+          window.gtag("consent", "update", {
+            analytics_storage: allowed ? "granted" : "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+          });
+          if (allowed) window.__csLoadAnalytics();
+        };
+        if (window.__csAnalyticsChoice() === "allowed") window.__csSetAnalyticsConsent("allowed");
+      })();
+    </script>
+    <title>Forex Spread Cost: Pips and Worked Example | CryptoStocks</title>
+    <meta name="description" content="See how bid and ask prices create an approximate spread cost, with a pip-value worksheet and limits for different currency pairs.">
+    <meta name="theme-color" content="#1d211e">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://cryptostocks.site/learn/forex-spread-cost-example/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CryptoStocks Academy">
+    <meta property="og:title" content="Forex Spread Cost: Pips and Worked Example | CryptoStocks">
+    <meta property="og:description" content="See how bid and ask prices create an approximate spread cost, with a pip-value worksheet and limits for different currency pairs.">
+    <meta property="og:url" content="https://cryptostocks.site/learn/forex-spread-cost-example/">
+    <meta property="og:image" content="https://cryptostocks.site/assets/images/cryptostocks-social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CryptoStocks Academy market learning map">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Forex Spread Cost: Pips and Worked Example | CryptoStocks">
+    <meta name="twitter:description" content="See how bid and ask prices create an approximate spread cost, with a pip-value worksheet and limits for different currency pairs.">
+    <meta name="twitter:image" content="https://cryptostocks.site/assets/images/cryptostocks-social.webp">
+    <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://cryptostocks.site/#organization","name":"CryptoStocks Academy","url":"https://cryptostocks.site","logo":{"@type":"ImageObject","url":"https://cryptostocks.site/favicon.svg"},"foundingDate":"2026-09-04","founder":{"@id":"https://cryptostocks.site/authors/umar-farooq/#person"}},{"@context":"https://schema.org","@type":"Article","headline":"Forex spread cost explained with a pip example","description":"See how bid and ask prices create an approximate spread cost, with a pip-value worksheet and limits for different currency pairs.","mainEntityOfPage":"https://cryptostocks.site/learn/forex-spread-cost-example/","image":"https://cryptostocks.site/assets/images/cryptostocks-social.webp","datePublished":"2026-09-20","dateModified":"2026-10-05","inLanguage":"en","isAccessibleForFree":true,"author":{"@id":"https://cryptostocks.site/authors/umar-farooq/#person"},"publisher":{"@id":"https://cryptostocks.site/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cryptostocks.site/"},{"@type":"ListItem","position":2,"name":"Learn","item":"https://cryptostocks.site/learn/"},{"@type":"ListItem","position":3,"name":"Forex spread cost explained with a pip example","item":"https://cryptostocks.site/learn/forex-spread-cost-example/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is a spread the same as a commission?","acceptedAnswer":{"@type":"Answer","text":"No. Some venues charge a commission in addition to the bid–ask spread."}},{"@type":"Question","name":"Why does the spread widen?","acceptedAnswer":{"@type":"Answer","text":"Liquidity and market conditions can change, especially near certain news events or thin trading periods."}},{"@type":"Question","name":"Can I use a fixed $10 pip value for every pair?","acceptedAnswer":{"@type":"Answer","text":"No. Pair, lot size and account currency affect pip value."}}]}]</script>
+    <link rel="stylesheet" href="/assets/styles.css">
+    
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="/" aria-label="CryptoStocks Academy home">
+        <span class="brand-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><path d="m14.8 9.2-1.7 3.9-3.9 1.7 1.7-3.9Z"/></svg></span>
+        <span class="brand-type"><strong>CryptoStocks</strong><small>ACADEMY</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">+</span></button>
+      <nav class="site-nav" id="primary-nav" data-menu aria-label="Primary navigation">
+        <a class="nav-link is-active" href="/learn/">Learn</a>
+        <a class="nav-link" href="/tools/">Tools</a>
+        <a class="nav-link" href="/practice/">Practice</a>
+        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="/careers/">Careers</a>
+        <a class="nav-cta" href="/learn/crypto-for-beginners/">Start learning <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </nav>
+    </div>
+  </header>
+    
+    <aside class="adsterra-placement adsterra-banner" aria-label="Advertisement">
+      <p class="adsterra-label">Advertisement</p>
+      <div class="adsterra-banner-scroll" role="region" aria-label="468 by 60 advertisement; scroll horizontally on small screens" tabindex="0">
+        <div class="adsterra-banner-unit">
+          <script>
+            atOptions = {
+              'key': '79d9ee47493f43da32dfbccf7c38729c',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/79d9ee47493f43da32dfbccf7c38729c"></script>
+        </div>
+      </div>
+    </aside>
+    <main id="main-content"><section class="lesson-hero"><div class="container"><div class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/learn/">Learn</a><span>/</span><span aria-current="page">Forex spread cost explained with a pip example</span></div><div class="lesson-hero-grid"><div><div class="eyebrow">Worked example / forex costs</div><h1>Forex spread cost explained with a pip example</h1><p class="lede">The bid–ask spread is part of the cost of entering and exiting a forex position. A chart can show little movement while the executable buy and sell quotes remain different. This page focuses on the spread&#39;s cash effect; the pip calculator answers a broader measurement question.</p><div class="lesson-meta"><span>Forex</span><span>8 min read</span><span>Updated 2026-10-05</span><a href="/authors/umar-farooq/">By Umar Farooq</a></div></div><div class="lesson-stamp"><span>FIELD NOTE</span><strong>forex spread cost example</strong><div class="stamp-lines"><i></i><i></i><i></i><i></i><i></i></div><small>Learn the language<br>then test the idea.</small></div></div></div></section>
+    <section class="section lesson-body"><div class="container lesson-layout"><article class="prose"><section class="direct-answer"><div class="section-kicker">Quick answer</div><h2>The short answer</h2><p>Estimated spread cost equals spread in pips multiplied by pip value at the position size. Confirm the quote, contract and account currency before combining this estimate with commissions or funding.</p></section><figure class="lesson-visual reveal"><img src="/assets/visuals/forex-margin.svg" width="960" height="540" loading="lazy" decoding="async" alt="Educational diagram supporting Forex spread cost explained with a pip example"><figcaption>Illustrative learning diagram · Created for CryptoStocks Academy</figcaption></figure><div class="outcomes"><div class="section-kicker">After this lesson</div><ul class="check-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Calculate the spread in pips.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Convert pips to an approximate cash cost.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Recognise why broker statements may differ.</span></li></ul></div>
+  <section class="content-section" id="read-both-sides-of-the-quote">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>Read both sides of the quote</h2>
+      <p>Suppose EUR/USD is shown at a bid of 1.0800 and an ask of 1.0802. The difference is 0.0002, commonly two pips for this pair. A buyer generally enters at the ask and could immediately sell at the bid; if neither quote changed, the quoted gap is approximately two pips.</p><p>Do not treat the bid–ask gap as a fixed charge. Spreads can vary with venue, instrument, liquidity, trading hours and news. The displayed quote is a teaching example and not a current broker price.</p>
+      <div class="formula"><span>Working model</span><strong>Approximate spread cost = spread in pips × cash value per pip</strong></div>
+      
+      
+      
+      
+    </div>
+  </section>
+  <section class="content-section" id="translate-the-gap-into-account-currency">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>Translate the gap into account currency</h2>
+      <p>If a position has a pip value of $1 per pip in its account currency, a two-pip spread implies roughly $2 in initial spread cost. If its pip value is $10, the same spread implies roughly $20. The cash cost changes with position size even when the spread in pips stays the same.</p><p>The pip value depends on the pair, lot size and account currency. For cross-currency pairs, conversion may be needed. Broker contract sizes and treatment of fractional pips also differ. Use the pip calculator for a basic estimate, then verify the contract specification and live quote at your venue.</p>
+      
+      
+      
+      
+      
+    </div>
+  </section>
+  <section class="content-section" id="look-beyond-the-spread">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>Look beyond the spread</h2>
+      <p>A low advertised spread does not mean the total trade is inexpensive. Commissions, overnight financing, conversion fees and slippage can contribute. Compare the effective entry and exit, not just a chart&#39;s midpoint or last quoted price.</p><p>If a strategy aims for a very small price move, transaction costs consume a larger share of its potential result. Write costs next to the planned risk and target before deciding whether an example has a sensible margin for uncertainty.</p>
+      
+      <ul class="dot-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Record bid and ask, not only a midprice.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Use the correct pip convention for the pair.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Convert the pip value to your account currency.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Check commissions and overnight costs separately.</span></li></ul>
+      
+      
+      
+    </div>
+  </section>
+  <section class="content-section" id="keep-pip-value-and-lot-size-in-the-same-convention">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>Keep pip value and lot size in the same convention</h2>
+      <p>These are invented pip values, not specifications for a named pair. If the input is already the pip value of the entire position, do not multiply by lot size again. The site tool expects a pip value for one lot.</p>
+      
+      
+      <div class="table-wrap"><table><tbody><tr><th scope="col">Spread</th><th scope="col">Pip value per 1 lot</th><th scope="col">Size</th><th scope="col">Estimated cost</th></tr><tr><td>1.2 pips</td><td>$10</td><td>0.5 lot</td><td>$6</td></tr><tr><td>2 pips</td><td>$10</td><td>0.5 lot</td><td>$10</td></tr></tbody></table></div>
+      
+      
+    </div>
+  </section><section class="example-card"><div class="section-kicker">Worked example</div><h2>Two-pip teaching example</h2><p>Illustrative EUR/USD 1.0800 bid / 1.0802 ask has a two-pip spread. At an assumed $1 per pip for the chosen size, approximate spread cost is $2, before commissions or slippage.</p></section><section class="application-card"><div class="section-kicker">Continue this topic</div><h2>Choose the next useful step</h2><ul class="reading-path"><li><a href="/learn/pips-spread-lots/">Pips, spread and lots: the forex vocabulary</a><p>Learn what a pip is in forex, how spread affects a trade and how lot size changes the cash value of a currency move.</p></li><li><a href="/tools/forex-pip-calculator/">Forex pip calculator</a><p>Estimate the gross value of a forex pip move from pips, lot size and a simple pip-value input.</p></li><li><a href="/learn/forex-for-beginners/">Forex for beginners: read a currency pair</a><p>Understand currency pairs, bid and ask prices, sessions, pips and the risk controls every forex beginner should learn first.</p></li></ul></section><section class="checklist-section"><div class="section-kicker">Quick review</div><h2>Carry these four ideas forward.</h2><ul class="check-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Check both quotes.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Confirm pip value for the size.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Add commissions.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Check whether the spread is variable.</span></li></ul></section><section class="quiz-section section-rule" data-quiz><div class="section-kicker">Check your understanding</div><div class="quiz-head"><div><h2>Three questions before the next tab.</h2><p>Choose the answer that best matches the lesson. This is a memory check, not a market signal.</p></div><span class="quiz-score" data-quiz-result aria-live="polite">Not started</span></div><div class="quiz-list"><fieldset class="quiz-question" data-answer="1"><legend><span>01</span>In EUR/USD, which currency is the base?</legend><div class="quiz-options"><label><input type="radio" name="quiz-forex-spread-cost-example-0" value="0"><span>USD</span></label><label><input type="radio" name="quiz-forex-spread-cost-example-0" value="1"><span>EUR</span></label><label><input type="radio" name="quiz-forex-spread-cost-example-0" value="2"><span>Both equally</span></label></div></fieldset><fieldset class="quiz-question" data-answer="0"><legend><span>02</span>What is the spread?</legend><div class="quiz-options"><label><input type="radio" name="quiz-forex-spread-cost-example-1" value="0"><span>The bid–ask difference</span></label><label><input type="radio" name="quiz-forex-spread-cost-example-1" value="1"><span>The account balance</span></label><label><input type="radio" name="quiz-forex-spread-cost-example-1" value="2"><span>The annual return</span></label></div></fieldset><fieldset class="quiz-question" data-answer="0"><legend><span>03</span>Why does lot size matter?</legend><div class="quiz-options"><label><input type="radio" name="quiz-forex-spread-cost-example-2" value="0"><span>It changes pip sensitivity</span></label><label><input type="radio" name="quiz-forex-spread-cost-example-2" value="1"><span>It guarantees a fill</span></label><label><input type="radio" name="quiz-forex-spread-cost-example-2" value="2"><span>It removes leverage risk</span></label></div></fieldset></div><button class="button outline" type="button" data-quiz-submit>Check answers <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></button></section><section class="sources-section section-rule"><div class="section-kicker">Primary references</div><h2>Continue with original sources.</h2><p>These links provide definitions and current context. Product rules, regulation and network details can change, so verify time-sensitive information at the source.</p><ul><li><a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">Bank for International Settlements <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6"/><path d="m19 5-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li><li><a href="https://www.cftc.gov/LearnAndProtect" target="_blank" rel="noopener noreferrer">CFTC customer education <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6"/><path d="m19 5-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li></ul></section><aside class="author-card compact"><img class="author-avatar" src="/assets/images/umar-farooq.jpeg" width="88" height="88" loading="lazy" alt="Umar Farooq, CryptoStocks Academy author"><div><span class="section-kicker">Written by</span><h2><a href="/authors/umar-farooq/">Umar Farooq</a></h2><p>Founder and educational content author.</p><a class="text-link" href="/authors/umar-farooq/">Author profile <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a></div></aside>
+  <section class="faq-section section-rule">
+    <div class="section-kicker">Common questions</div>
+    <h2>Before you move on</h2>
+    <div class="faq-list"><details><summary>Is a spread the same as a commission?<span>+</span></summary><p>No. Some venues charge a commission in addition to the bid–ask spread.</p></details><details><summary>Why does the spread widen?<span>+</span></summary><p>Liquidity and market conditions can change, especially near certain news events or thin trading periods.</p></details><details><summary>Can I use a fixed $10 pip value for every pair?<span>+</span></summary><p>No. Pair, lot size and account currency affect pip value.</p></details></div>
+  </section><section class="related section-rule"><div class="section-kicker">Keep exploring</div><div class="related-grid"><a class="related-card" href="/learn/pips-spread-lots/"><span class="tag">Forex</span><h3>Pips, spread and lots: the forex vocabulary</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a><a class="related-card" href="/tools/forex-pip-calculator/"><span class="tag">Calculator</span><h3>Forex pip calculator</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a><a class="related-card" href="/learn/forex-for-beginners/"><span class="tag">Forex</span><h3>Forex for beginners: read a currency pair</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a></div></section></article><aside class="lesson-aside"><div class="aside-card sticky"><div class="section-kicker">On this page</div><ol><li><span>01</span><a href="#read-both-sides-of-the-quote">Read both sides of the quote</a></li><li><span>02</span><a href="#translate-the-gap-into-account-currency">Translate the gap into account currency</a></li><li><span>03</span><a href="#look-beyond-the-spread">Look beyond the spread</a></li><li><span>04</span><a href="#keep-pip-value-and-lot-size-in-the-same-convention">Keep pip value and lot size in the same convention</a></li></ol><a class="aside-action" href="/practice/paper-trading/">Practise the process <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a></div><div class="aside-card aside-note"><span class="aside-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 4.3-2.9 7.7-7 10-4.1-2.3-7-5.7-7-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><strong>Educational only</strong><p>This page explains concepts. It does not provide personalised advice, live signals or a guaranteed outcome.</p></div></aside></div></section></main>
+    
+    <aside class="adsterra-placement adsterra-native" aria-label="Advertisement">
+      <p class="adsterra-label">Advertisement</p>
+      <script async="async" data-cfasync="false" src="https://bauval.org/21/df792c9c1053373ae8a825a6a1678409"></script>
+      <div id="container-df792c9c1053373ae8a825a6a1678409"></div>
+    </aside>
+    
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="CryptoStocks Academy home">
+          <span class="brand-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><path d="m14.8 9.2-1.7 3.9-3.9 1.7 1.7-3.9Z"/></svg></span>
+          <span class="brand-type"><strong>CryptoStocks</strong><small>ACADEMY</small></span>
+        </a>
+        <p>Clearer market education for curious beginners. Crypto, forex and stocks—one calm lesson at a time.</p>
+      </div>
+      <div class="footer-column"><span class="footer-label">Explore</span><a href="/careers/">Careers · We are hiring</a><a href="/learn/">Learning hub</a><a href="/tools/">Calculators</a><a href="/practice/paper-trading/">Paper trading</a></div>
+      <div class="footer-column"><span class="footer-label">Trust</span><a href="/about/">About</a><a href="/authors/umar-farooq/">Author</a><a href="/editorial-policy/">Editorial policy</a><a href="/data-sources/">Data sources</a><a href="/corrections-updates/">Corrections &amp; updates</a></div>
+      <div class="footer-column"><span class="footer-label">Legal</span><a href="/risk-disclosure/">Risk disclosure</a><a href="/privacy/">Privacy</a><button class="footer-link-button" type="button" data-open-privacy>Privacy choices</button><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 CryptoStocks Academy · Founded by Umar Farooq</span><span>Educational content only · No live trading or custody</span></div>
+  </footer>
+    <section class="privacy-banner" data-privacy-banner hidden role="dialog" aria-labelledby="privacy-choice-title" aria-describedby="privacy-choice-copy">
+      <div class="privacy-banner-copy">
+        <span class="section-kicker">Privacy choice</span>
+        <h2 id="privacy-choice-title">Help improve the learning experience?</h2>
+        <p id="privacy-choice-copy">With your permission, CryptoStocks Academy uses Google Analytics to understand visits and improve pages. Calculator inputs and paper trades stay in your browser. You can change this choice later in the footer. This choice controls Google Analytics only; third-party advertising loads separately. <a href="/privacy/">Read the privacy notice</a>.</p>
+      </div>
+      <div class="privacy-actions">
+        <button class="button outline" type="button" data-privacy-decline>Continue without analytics</button>
+        <button class="button solid" type="button" data-privacy-accept>Allow analytics</button>
+      </div>
+    </section>
+    <script src="/assets/app.js" defer></script>
+    
+    
+    <script data-cfasync="false" src="https://abscloud.org/1/8beb8b010351f380e18548c507f08c28"></script>
+    <script data-cfasync="false" src="https://bauval.org/14/32f63a31f6cfcf8273b55119cdce3329"></script>
+  </body>
+</html>

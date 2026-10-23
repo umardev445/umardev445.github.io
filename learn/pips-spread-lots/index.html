@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Consent-first analytics bootstrap. The external GA library loads only after opt-in. -->
+    <script>
+      (() => {
+        const measurementId = "G-D95T0FNX16";
+        const choiceKey = "cs_analytics_choice";
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gtag("consent", "default", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          wait_for_update: 500
+        });
+        window.__csAnalyticsChoice = () => {
+          try { return window.localStorage.getItem(choiceKey); } catch (_) { return null; }
+        };
+        window.__csLoadAnalytics = () => {
+          if (document.querySelector("script[data-cs-analytics]")) return;
+          const tag = document.createElement("script");
+          tag.async = true;
+          tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+          tag.dataset.csAnalytics = "";
+          document.head.append(tag);
+          window.gtag("js", new Date());
+          window.gtag("config", measurementId);
+        };
+        window.__csSetAnalyticsConsent = (choice) => {
+          const allowed = choice === "allowed";
+          try { window.localStorage.setItem(choiceKey, allowed ? "allowed" : "denied"); } catch (_) {}
+          window.gtag("consent", "update", {
+            analytics_storage: allowed ? "granted" : "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+          });
+          if (allowed) window.__csLoadAnalytics();
+        };
+        if (window.__csAnalyticsChoice() === "allowed") window.__csSetAnalyticsConsent("allowed");
+      })();
+    </script>
+    <title>What Is a Pip in Forex? Spread and Lot Size Explained | CryptoStocks</title>
+    <meta name="description" content="Learn what a pip is in forex, how spread affects a trade and how lot size changes the cash value of a currency move.">
+    <meta name="theme-color" content="#1d211e">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://cryptostocks.site/learn/pips-spread-lots/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CryptoStocks Academy">
+    <meta property="og:title" content="What Is a Pip in Forex? Spread and Lot Size Explained | CryptoStocks">
+    <meta property="og:description" content="Learn what a pip is in forex, how spread affects a trade and how lot size changes the cash value of a currency move.">
+    <meta property="og:url" content="https://cryptostocks.site/learn/pips-spread-lots/">
+    <meta property="og:image" content="https://cryptostocks.site/assets/images/cryptostocks-social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CryptoStocks Academy market learning map">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What Is a Pip in Forex? Spread and Lot Size Explained | CryptoStocks">
+    <meta name="twitter:description" content="Learn what a pip is in forex, how spread affects a trade and how lot size changes the cash value of a currency move.">
+    <meta name="twitter:image" content="https://cryptostocks.site/assets/images/cryptostocks-social.webp">
+    <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://cryptostocks.site/#organization","name":"CryptoStocks Academy","url":"https://cryptostocks.site","logo":{"@type":"ImageObject","url":"https://cryptostocks.site/favicon.svg"},"foundingDate":"2026-09-04","founder":{"@id":"https://cryptostocks.site/authors/umar-farooq/#person"}},{"@context":"https://schema.org","@type":"Article","headline":"Pips, spread and lots: the forex vocabulary","description":"Learn what a pip is in forex, how spread affects a trade and how lot size changes the cash value of a currency move.","mainEntityOfPage":"https://cryptostocks.site/learn/pips-spread-lots/","image":"https://cryptostocks.site/assets/images/cryptostocks-social.webp","datePublished":"2026-09-04","dateModified":"2026-10-05","inLanguage":"en","isAccessibleForFree":true,"author":{"@id":"https://cryptostocks.site/authors/umar-farooq/#person"},"publisher":{"@id":"https://cryptostocks.site/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cryptostocks.site/"},{"@type":"ListItem","position":2,"name":"Learn","item":"https://cryptostocks.site/learn/"},{"@type":"ListItem","position":3,"name":"Pips, spread and lots: the forex vocabulary","item":"https://cryptostocks.site/learn/pips-spread-lots/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is one pip always the fourth decimal place?","acceptedAnswer":{"@type":"Answer","text":"No. Many yen pairs use the second decimal place, and some platforms show fractional pips. Check the instrument quote."}},{"@type":"Question","name":"What is a lot in forex?","acceptedAnswer":{"@type":"Answer","text":"A lot is a unit of trade quantity. Standard, mini and micro labels are common, but the contract specification is the authority."}},{"@type":"Question","name":"Does a lower spread mean no risk?","acceptedAnswer":{"@type":"Answer","text":"No. Spread is only one cost. Price movement, leverage, liquidity, gaps and execution remain risks."}}]}]</script>
+    <link rel="stylesheet" href="/assets/styles.css">
+    
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="/" aria-label="CryptoStocks Academy home">
+        <span class="brand-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><path d="m14.8 9.2-1.7 3.9-3.9 1.7 1.7-3.9Z"/></svg></span>
+        <span class="brand-type"><strong>CryptoStocks</strong><small>ACADEMY</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">+</span></button>
+      <nav class="site-nav" id="primary-nav" data-menu aria-label="Primary navigation">
+        <a class="nav-link is-active" href="/learn/">Learn</a>
+        <a class="nav-link" href="/tools/">Tools</a>
+        <a class="nav-link" href="/practice/">Practice</a>
+        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="/careers/">Careers</a>
+        <a class="nav-cta" href="/learn/crypto-for-beginners/">Start learning <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </nav>
+    </div>
+  </header>
+    
+    <aside class="adsterra-placement adsterra-banner" aria-label="Advertisement">
+      <p class="adsterra-label">Advertisement</p>
+      <div class="adsterra-banner-scroll" role="region" aria-label="468 by 60 advertisement; scroll horizontally on small screens" tabindex="0">
+        <div class="adsterra-banner-unit">
+          <script>
+            atOptions = {
+              'key': '79d9ee47493f43da32dfbccf7c38729c',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/79d9ee47493f43da32dfbccf7c38729c"></script>
+        </div>
+      </div>
+    </aside>
+    <main id="main-content"><section class="lesson-hero"><div class="container"><div class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/learn/">Learn</a><span>/</span><span aria-current="page">Pips, spread and lots: the forex vocabulary</span></div><div class="lesson-hero-grid"><div><div class="eyebrow">Forex mechanics / measurement</div><h1>Pips, spread and lots: the forex vocabulary</h1><p class="lede">Pips, spread and lots are simple words that hide important details. A pip describes a conventional price increment, spread describes the gap between bid and ask, and a lot describes the quantity traded. You need all three to translate a chart move into an approximate cash result.</p><div class="lesson-meta"><span>Forex</span><span>8 min read</span><span>Updated 2026-10-05</span><a href="/authors/umar-farooq/">By Umar Farooq</a></div></div><div class="lesson-stamp"><span>FIELD NOTE</span><strong>what is a pip in forex</strong><div class="stamp-lines"><i></i><i></i><i></i><i></i><i></i></div><small>Learn the language<br>then test the idea.</small></div></div></div></section>
+    <section class="section lesson-body"><div class="container lesson-layout"><article class="prose"><section class="direct-answer"><div class="section-kicker">Quick answer</div><h2>The short answer</h2><p>A pip measures a conventional price increment, a spread is the bid–ask difference, and a lot describes position size. Pip cash value depends on the pair, contract and account currency.</p></section><figure class="lesson-visual reveal"><img src="/assets/visuals/forex-margin.svg" width="960" height="540" loading="lazy" decoding="async" alt="Educational diagram supporting Pips, spread and lots: the forex vocabulary"><figcaption>Illustrative learning diagram · Created for CryptoStocks Academy</figcaption></figure><div class="outcomes"><div class="section-kicker">After this lesson</div><ul class="check-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Identify the pip convention for common currency pairs.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Explain why a trade starts with a spread cost.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Connect lot size to pip value and account risk.</span></li></ul></div>
+  <section class="content-section" id="what-is-a-pip-in-forex">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>What is a pip in forex?</h2>
+      <p>For many major currency pairs, one pip is 0.0001. For pairs quoted with Japanese yen, one pip is often 0.01. Some platforms display fractional pips, sometimes called pipettes. Always check the quote precision and contract specification before doing the calculation.</p><p>A 20-pip move is a price description, not a cash result. The cash value depends on position size, the pair and the currency in which your account is denominated.</p>
+      <div class="formula"><span>Working model</span><strong>Approximate pip result = pip movement × pip value per lot × lots</strong></div>
+      
+      
+      
+      
+    </div>
+  </section>
+  <section class="content-section" id="spread-is-a-cost-of-access">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>Spread is a cost of access</h2>
+      <p>The bid is the price available when selling and the ask is the price available when buying. Their difference is the spread. If you buy at the ask and immediately sell at the bid, the price must move enough to cover the spread before the position is positive before other costs.</p><p>Spreads can widen around news, market open, rollover and low-liquidity periods. A strategy that looks fine on a clean chart may behave differently after real execution costs are included.</p>
+      
+      
+      
+      
+      <aside class="callout"><span class="callout-mark">!</span><p>A broker’s advertised minimum spread may not be the spread you receive at every time or on every pair.</p></aside>
+    </div>
+  </section>
+  <section class="content-section" id="lot-size-changes-the-sensitivity">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>Lot size changes the sensitivity</h2>
+      <p>A standard lot is commonly 100,000 units of the base currency, a mini lot 10,000 and a micro lot 1,000, but products differ. The lot label is less important than the actual contract size and pip value shown by the venue.</p><p>Use the site’s pip calculator to explore examples, then compare the result with a broker’s specification. If the account currency differs from the quote currency, conversion can change the final value.</p>
+      
+      <ul class="dot-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Confirm contract size.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Confirm pip decimal convention.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Check account-currency conversion.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Include spread, commission and rollover.</span></li></ul>
+      
+      
+      
+    </div>
+  </section><section class="content-section practical-note section-rule"><div class="section-kicker">In practice</div><h2>Pair a pip with a cash value</h2><p>A two-pip spread has no single cash cost until you know the position&#39;s pip value in your account currency. For a position worth $1 per pip it is about $2; at $10 per pip it is about $20, before other charges.</p><p>Read the dedicated spread-cost worksheet for the bid/ask calculation, then use the pip tool with the pair and lot assumptions shown by your broker.</p></section><section class="example-card"><div class="section-kicker">Worked example</div><h2>A 25-pip move</h2><p>If a pair moves 25 pips in your direction and the position’s pip value is 2 per pip, the gross result is approximately 50 before spread, commissions, financing and conversion. The same 25 pips with a different lot size can produce a very different cash result.</p></section><section class="application-card"><div class="section-kicker">Continue this topic</div><h2>Choose the next useful step</h2><ul class="reading-path"><li><a href="/learn/forex-spread-cost-example/">Forex spread cost explained with a pip example</a><p>See how bid and ask prices create an approximate spread cost, with a pip-value worksheet and limits for different currency pairs.</p></li><li><a href="/learn/forex-for-beginners/">Forex for beginners: read a currency pair</a><p>Understand currency pairs, bid and ask prices, sessions, pips and the risk controls every forex beginner should learn first.</p></li><li><a href="/learn/leverage-and-margin/">Leverage and margin: exposure is not safety</a><p>Understand leverage, margin, liquidation risk and why a small deposit can control a much larger market exposure.</p></li></ul></section><section class="checklist-section"><div class="section-kicker">Quick review</div><h2>Carry these four ideas forward.</h2><ul class="check-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Check the pair’s pip convention.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Use the actual contract size.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Estimate the spread at your trading time.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Convert the result into account currency.</span></li></ul></section><section class="quiz-section section-rule" data-quiz><div class="section-kicker">Check your understanding</div><div class="quiz-head"><div><h2>Three questions before the next tab.</h2><p>Choose the answer that best matches the lesson. This is a memory check, not a market signal.</p></div><span class="quiz-score" data-quiz-result aria-live="polite">Not started</span></div><div class="quiz-list"><fieldset class="quiz-question" data-answer="1"><legend><span>01</span>In EUR/USD, which currency is the base?</legend><div class="quiz-options"><label><input type="radio" name="quiz-pips-spread-lots-0" value="0"><span>USD</span></label><label><input type="radio" name="quiz-pips-spread-lots-0" value="1"><span>EUR</span></label><label><input type="radio" name="quiz-pips-spread-lots-0" value="2"><span>Both equally</span></label></div></fieldset><fieldset class="quiz-question" data-answer="0"><legend><span>02</span>What is the spread?</legend><div class="quiz-options"><label><input type="radio" name="quiz-pips-spread-lots-1" value="0"><span>The bid–ask difference</span></label><label><input type="radio" name="quiz-pips-spread-lots-1" value="1"><span>The account balance</span></label><label><input type="radio" name="quiz-pips-spread-lots-1" value="2"><span>The annual return</span></label></div></fieldset><fieldset class="quiz-question" data-answer="0"><legend><span>03</span>Why does lot size matter?</legend><div class="quiz-options"><label><input type="radio" name="quiz-pips-spread-lots-2" value="0"><span>It changes pip sensitivity</span></label><label><input type="radio" name="quiz-pips-spread-lots-2" value="1"><span>It guarantees a fill</span></label><label><input type="radio" name="quiz-pips-spread-lots-2" value="2"><span>It removes leverage risk</span></label></div></fieldset></div><button class="button outline" type="button" data-quiz-submit>Check answers <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></button></section><section class="sources-section section-rule"><div class="section-kicker">Primary references</div><h2>Continue with original sources.</h2><p>These links provide definitions and current context. Product rules, regulation and network details can change, so verify time-sensitive information at the source.</p><ul><li><a href="https://www.bis.org/statistics/rpfx22.htm" target="_blank" rel="noopener noreferrer">Bank for International Settlements <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6"/><path d="m19 5-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li><li><a href="https://www.cftc.gov/LearnAndProtect" target="_blank" rel="noopener noreferrer">CFTC customer education <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6"/><path d="m19 5-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li></ul></section><aside class="author-card compact"><img class="author-avatar" src="/assets/images/umar-farooq.jpeg" width="88" height="88" loading="lazy" alt="Umar Farooq, CryptoStocks Academy author"><div><span class="section-kicker">Written by</span><h2><a href="/authors/umar-farooq/">Umar Farooq</a></h2><p>Founder and educational content author.</p><a class="text-link" href="/authors/umar-farooq/">Author profile <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a></div></aside>
+  <section class="faq-section section-rule">
+    <div class="section-kicker">Common questions</div>
+    <h2>Before you move on</h2>
+    <div class="faq-list"><details><summary>Is one pip always the fourth decimal place?<span>+</span></summary><p>No. Many yen pairs use the second decimal place, and some platforms show fractional pips. Check the instrument quote.</p></details><details><summary>What is a lot in forex?<span>+</span></summary><p>A lot is a unit of trade quantity. Standard, mini and micro labels are common, but the contract specification is the authority.</p></details><details><summary>Does a lower spread mean no risk?<span>+</span></summary><p>No. Spread is only one cost. Price movement, leverage, liquidity, gaps and execution remain risks.</p></details></div>
+  </section><section class="related section-rule"><div class="section-kicker">Keep exploring</div><div class="related-grid"><a class="related-card" href="/learn/forex-spread-cost-example/"><span class="tag">Forex</span><h3>Forex spread cost explained with a pip example</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a><a class="related-card" href="/learn/forex-for-beginners/"><span class="tag">Forex</span><h3>Forex for beginners: read a currency pair</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a><a class="related-card" href="/learn/leverage-and-margin/"><span class="tag">Risk</span><h3>Leverage and margin: exposure is not safety</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a></div></section></article><aside class="lesson-aside"><div class="aside-card sticky"><div class="section-kicker">On this page</div><ol><li><span>01</span><a href="#what-is-a-pip-in-forex">What is a pip in forex?</a></li><li><span>02</span><a href="#spread-is-a-cost-of-access">Spread is a cost of access</a></li><li><span>03</span><a href="#lot-size-changes-the-sensitivity">Lot size changes the sensitivity</a></li></ol><a class="aside-action" href="/practice/paper-trading/">Practise the process <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a></div><div class="aside-card aside-note"><span class="aside-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 4.3-2.9 7.7-7 10-4.1-2.3-7-5.7-7-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><strong>Educational only</strong><p>This page explains concepts. It does not provide personalised advice, live signals or a guaranteed outcome.</p></div></aside></div></section></main>
+    
+    <aside class="adsterra-placement adsterra-native" aria-label="Advertisement">
+      <p class="adsterra-label">Advertisement</p>
+      <script async="async" data-cfasync="false" src="https://bauval.org/21/df792c9c1053373ae8a825a6a1678409"></script>
+      <div id="container-df792c9c1053373ae8a825a6a1678409"></div>
+    </aside>
+    
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="CryptoStocks Academy home">
+          <span class="brand-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><path d="m14.8 9.2-1.7 3.9-3.9 1.7 1.7-3.9Z"/></svg></span>
+          <span class="brand-type"><strong>CryptoStocks</strong><small>ACADEMY</small></span>
+        </a>
+        <p>Clearer market education for curious beginners. Crypto, forex and stocks—one calm lesson at a time.</p>
+      </div>
+      <div class="footer-column"><span class="footer-label">Explore</span><a href="/careers/">Careers · We are hiring</a><a href="/learn/">Learning hub</a><a href="/tools/">Calculators</a><a href="/practice/paper-trading/">Paper trading</a></div>
+      <div class="footer-column"><span class="footer-label">Trust</span><a href="/about/">About</a><a href="/authors/umar-farooq/">Author</a><a href="/editorial-policy/">Editorial policy</a><a href="/data-sources/">Data sources</a><a href="/corrections-updates/">Corrections &amp; updates</a></div>
+      <div class="footer-column"><span class="footer-label">Legal</span><a href="/risk-disclosure/">Risk disclosure</a><a href="/privacy/">Privacy</a><button class="footer-link-button" type="button" data-open-privacy>Privacy choices</button><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 CryptoStocks Academy · Founded by Umar Farooq</span><span>Educational content only · No live trading or custody</span></div>
+  </footer>
+    <section class="privacy-banner" data-privacy-banner hidden role="dialog" aria-labelledby="privacy-choice-title" aria-describedby="privacy-choice-copy">
+      <div class="privacy-banner-copy">
+        <span class="section-kicker">Privacy choice</span>
+        <h2 id="privacy-choice-title">Help improve the learning experience?</h2>
+        <p id="privacy-choice-copy">With your permission, CryptoStocks Academy uses Google Analytics to understand visits and improve pages. Calculator inputs and paper trades stay in your browser. You can change this choice later in the footer. This choice controls Google Analytics only; third-party advertising loads separately. <a href="/privacy/">Read the privacy notice</a>.</p>
+      </div>
+      <div class="privacy-actions">
+        <button class="button outline" type="button" data-privacy-decline>Continue without analytics</button>
+        <button class="button solid" type="button" data-privacy-accept>Allow analytics</button>
+      </div>
+    </section>
+    <script src="/assets/app.js" defer></script>
+    
+    
+    <script data-cfasync="false" src="https://abscloud.org/1/8beb8b010351f380e18548c507f08c28"></script>
+    <script data-cfasync="false" src="https://bauval.org/14/32f63a31f6cfcf8273b55119cdce3329"></script>
+  </body>
+</html>

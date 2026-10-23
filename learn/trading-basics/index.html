@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Consent-first analytics bootstrap. The external GA library loads only after opt-in. -->
+    <script>
+      (() => {
+        const measurementId = "G-D95T0FNX16";
+        const choiceKey = "cs_analytics_choice";
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gtag("consent", "default", {
+          analytics_storage: "denied",
+          ad_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+          wait_for_update: 500
+        });
+        window.__csAnalyticsChoice = () => {
+          try { return window.localStorage.getItem(choiceKey); } catch (_) { return null; }
+        };
+        window.__csLoadAnalytics = () => {
+          if (document.querySelector("script[data-cs-analytics]")) return;
+          const tag = document.createElement("script");
+          tag.async = true;
+          tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(measurementId);
+          tag.dataset.csAnalytics = "";
+          document.head.append(tag);
+          window.gtag("js", new Date());
+          window.gtag("config", measurementId);
+        };
+        window.__csSetAnalyticsConsent = (choice) => {
+          const allowed = choice === "allowed";
+          try { window.localStorage.setItem(choiceKey, allowed ? "allowed" : "denied"); } catch (_) {}
+          window.gtag("consent", "update", {
+            analytics_storage: allowed ? "granted" : "denied",
+            ad_storage: "denied",
+            ad_user_data: "denied",
+            ad_personalization: "denied"
+          });
+          if (allowed) window.__csLoadAnalytics();
+        };
+        if (window.__csAnalyticsChoice() === "allowed") window.__csSetAnalyticsConsent("allowed");
+      })();
+    </script>
+    <title>Trading Basics for Beginners: Orders, Risk and Process | CryptoStocks</title>
+    <meta name="description" content="Learn the building blocks of trading: market orders, limit orders, time horizon, risk and how to write a simple repeatable plan.">
+    <meta name="theme-color" content="#1d211e">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://cryptostocks.site/learn/trading-basics/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CryptoStocks Academy">
+    <meta property="og:title" content="Trading Basics for Beginners: Orders, Risk and Process | CryptoStocks">
+    <meta property="og:description" content="Learn the building blocks of trading: market orders, limit orders, time horizon, risk and how to write a simple repeatable plan.">
+    <meta property="og:url" content="https://cryptostocks.site/learn/trading-basics/">
+    <meta property="og:image" content="https://cryptostocks.site/assets/images/cryptostocks-social.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="CryptoStocks Academy market learning map">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Trading Basics for Beginners: Orders, Risk and Process | CryptoStocks">
+    <meta name="twitter:description" content="Learn the building blocks of trading: market orders, limit orders, time horizon, risk and how to write a simple repeatable plan.">
+    <meta name="twitter:image" content="https://cryptostocks.site/assets/images/cryptostocks-social.webp">
+    <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","@id":"https://cryptostocks.site/#organization","name":"CryptoStocks Academy","url":"https://cryptostocks.site","logo":{"@type":"ImageObject","url":"https://cryptostocks.site/favicon.svg"},"foundingDate":"2026-09-04","founder":{"@id":"https://cryptostocks.site/authors/umar-farooq/#person"}},{"@context":"https://schema.org","@type":"Article","headline":"Trading basics: orders, price and a repeatable plan","description":"Learn the building blocks of trading: market orders, limit orders, time horizon, risk and how to write a simple repeatable plan.","mainEntityOfPage":"https://cryptostocks.site/learn/trading-basics/","image":"https://cryptostocks.site/assets/images/cryptostocks-social.webp","datePublished":"2026-09-04","dateModified":"2026-10-05","inLanguage":"en","isAccessibleForFree":true,"author":{"@id":"https://cryptostocks.site/authors/umar-farooq/#person"},"publisher":{"@id":"https://cryptostocks.site/#organization"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cryptostocks.site/"},{"@type":"ListItem","position":2,"name":"Learn","item":"https://cryptostocks.site/learn/"},{"@type":"ListItem","position":3,"name":"Trading basics: orders, price and a repeatable plan","item":"https://cryptostocks.site/learn/trading-basics/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between investing and trading?","acceptedAnswer":{"@type":"Answer","text":"The terms can overlap, but investing often refers to a longer ownership horizon while trading usually emphasises shorter-term decisions and execution. Both still involve risk."}},{"@type":"Question","name":"Why did my order fill at a different price?","acceptedAnswer":{"@type":"Answer","text":"Market movement, spread, liquidity and slippage can produce a different execution price. Read the venue’s execution policy."}},{"@type":"Question","name":"How many rules should a beginner have?","acceptedAnswer":{"@type":"Answer","text":"Start with a small set you can follow consistently. A short, measurable plan is more useful than a long list you never review."}}]}]</script>
+    <link rel="stylesheet" href="/assets/styles.css">
+    
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="/" aria-label="CryptoStocks Academy home">
+        <span class="brand-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><path d="m14.8 9.2-1.7 3.9-3.9 1.7 1.7-3.9Z"/></svg></span>
+        <span class="brand-type"><strong>CryptoStocks</strong><small>ACADEMY</small></span>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-nav">Menu <span aria-hidden="true">+</span></button>
+      <nav class="site-nav" id="primary-nav" data-menu aria-label="Primary navigation">
+        <a class="nav-link is-active" href="/learn/">Learn</a>
+        <a class="nav-link" href="/tools/">Tools</a>
+        <a class="nav-link" href="/practice/">Practice</a>
+        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="/careers/">Careers</a>
+        <a class="nav-cta" href="/learn/crypto-for-beginners/">Start learning <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </nav>
+    </div>
+  </header>
+    
+    <aside class="adsterra-placement adsterra-banner" aria-label="Advertisement">
+      <p class="adsterra-label">Advertisement</p>
+      <div class="adsterra-banner-scroll" role="region" aria-label="468 by 60 advertisement; scroll horizontally on small screens" tabindex="0">
+        <div class="adsterra-banner-unit">
+          <script>
+            atOptions = {
+              'key': '79d9ee47493f43da32dfbccf7c38729c',
+              'format': 'iframe',
+              'height': 60,
+              'width': 468,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/79d9ee47493f43da32dfbccf7c38729c"></script>
+        </div>
+      </div>
+    </aside>
+    <main id="main-content"><section class="lesson-hero"><div class="container"><div class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/learn/">Learn</a><span>/</span><span aria-current="page">Trading basics: orders, price and a repeatable plan</span></div><div class="lesson-hero-grid"><div><div class="eyebrow">Core lesson / market mechanics</div><h1>Trading basics: orders, price and a repeatable plan</h1><p class="lede">Trading is a decision process carried out under uncertainty. A chart can show where price has been, but it cannot remove the possibility of an unexpected outcome. Beginners benefit from learning execution terms and building a process before trying to optimise a strategy.</p><div class="lesson-meta"><span>Foundations</span><span>11 min read</span><span>Updated 2026-10-05</span><a href="/authors/umar-farooq/">By Umar Farooq</a></div></div><div class="lesson-stamp"><span>FIELD NOTE</span><strong>trading basics</strong><div class="stamp-lines"><i></i><i></i><i></i><i></i><i></i></div><small>Learn the language<br>then test the idea.</small></div></div></div></section>
+    <section class="section lesson-body"><div class="container lesson-layout"><article class="prose"><section class="direct-answer"><div class="section-kicker">Quick answer</div><h2>The short answer</h2><p>A trading plan defines the instrument, order type, entry condition, invalidation, position size and review method. Define the cash downside before evaluating a potential upside.</p></section><figure class="lesson-visual reveal"><img src="/assets/visuals/market-orders.svg" width="960" height="540" loading="lazy" decoding="async" alt="Educational diagram supporting Trading basics: orders, price and a repeatable plan"><figcaption>Illustrative learning diagram · Created for CryptoStocks Academy</figcaption></figure><div class="outcomes"><div class="section-kicker">After this lesson</div><ul class="check-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Choose between a market, limit and stop order in plain language.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Separate a setup from an entry and an exit.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Write the minimum fields of a trading plan.</span></li></ul></div>
+  <section class="content-section" id="an-order-is-an-instruction-with-trade-offs">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>An order is an instruction with trade-offs</h2>
+      <p>A market order prioritises execution speed but accepts the available price. A limit order sets a maximum buy price or minimum sell price but may not fill. A stop order can become a market or limit order after a trigger, depending on the venue. Names and protections vary, so the platform’s order documentation matters.</p><p>The right order type depends on what is more important in the situation: entering at a precise price, getting filled before a move, limiting slippage or reducing the chance of an accidental fill. There is no universal best order.</p>
+      
+      
+      <div class="table-wrap"><table><tbody><tr><th scope="col">Market</th><th scope="col">Execution now</th><th scope="col">Price may vary</th></tr><tr><td>Limit</td><td>Price control</td><td>May not fill</td></tr><tr><td>Stop</td><td>Trigger after a level</td><td>Can fill during volatility</td></tr></tbody></table></div>
+      
+      
+    </div>
+  </section>
+  <section class="content-section" id="a-setup-is-not-a-prediction">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>A setup is not a prediction</h2>
+      <p>A setup is a defined combination of context and conditions that makes a trade worth considering. The entry is where you act, the invalidation level is where the original idea no longer makes sense, and the exit plan explains how you will handle a favourable or unfavourable result.</p><p>A plan becomes testable when the words are specific. ‘Buy if it looks strong’ is difficult to review. ‘Consider a long only if price closes above the prior range high and risk remains below one percent of the account’ can be recorded and evaluated.</p>
+      <div class="formula"><span>Working model</span><strong>Trade decision = context + trigger + invalidation + position size + review</strong></div>
+      
+      
+      
+      
+    </div>
+  </section>
+  <section class="content-section" id="your-first-trading-plan-can-fit-on-one-page">
+    <div class="section-marker" aria-hidden="true"></div>
+    <div class="content-section-body">
+      <h2>Your first trading plan can fit on one page</h2>
+      <p>Write the instruments and timeframes you will study, the conditions you need, the maximum risk per idea, what would stop you from trading and how you will review the result. Include costs and the possibility of a gap or a partial fill.</p><p>A plan is not a contract with the market. It is a tool for reducing impulsive decisions. Review it after a meaningful sample of trades rather than changing it after one outcome.</p>
+      
+      <ul class="dot-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Market and timeframe</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Entry trigger</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Invalidation and exit logic</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Cash risk and size</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Reason for the trade</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Review date</span></li></ul>
+      
+      
+      
+    </div>
+  </section><section class="content-section practical-note section-rule"><div class="section-kicker">In practice</div><h2>Write the order plan before clicking</h2><p>For an illustrative buy, record the intended order type, maximum acceptable entry, invalidation level, position size and maximum cash loss. A market order may fill quickly at an unexpected price; a limit order may never fill.</p><p>After the example, compare intended and actual execution. If the entry changes, recalculate both the stop distance and risk before treating the earlier size as still valid.</p></section><section class="example-card"><div class="section-kicker">Worked example</div><h2>A complete sentence</h2><p>‘I will consider this setup only if the daily close confirms the range break. If the invalidation level is hit, I will exit because the premise failed. I will risk a fixed amount, record the result and not add to a losing position without a pre-written rule.’</p></section><section class="application-card"><div class="section-kicker">Continue this topic</div><h2>Choose the next useful step</h2><ul class="reading-path"><li><a href="/learn/market-orders-and-limit-orders/">Market order vs limit order: a clear beginner comparison</a><p>Compare market, limit and stop orders, including execution speed, price control, slippage and the questions to ask before sending one.</p></li><li><a href="/learn/risk-management/">Risk management in trading: cash risk, stops and exposure</a><p>Learn practical risk management in trading: cash risk, stop planning, correlation, drawdown and why survival comes before returns.</p></li><li><a href="/learn/trading-journal/">How to keep a trading journal that teaches you something</a><p>Create a useful trading journal with pre-trade reasoning, risk, execution notes, screenshots and post-trade review prompts.</p></li></ul></section><section class="checklist-section"><div class="section-kicker">Quick review</div><h2>Carry these four ideas forward.</h2><ul class="check-list"><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Know the order you are sending.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Define the invalidation before entry.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Size the position from cash risk.</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4.2 4.2L19 6.5"/></svg><span>Review a group of trades, not one trade.</span></li></ul></section><section class="quiz-section section-rule" data-quiz><div class="section-kicker">Check your understanding</div><div class="quiz-head"><div><h2>Three questions before the next tab.</h2><p>Choose the answer that best matches the lesson. This is a memory check, not a market signal.</p></div><span class="quiz-score" data-quiz-result aria-live="polite">Not started</span></div><div class="quiz-list"><fieldset class="quiz-question" data-answer="0"><legend><span>01</span>What does a limit order prioritise?</legend><div class="quiz-options"><label><input type="radio" name="quiz-trading-basics-0" value="0"><span>Price control</span></label><label><input type="radio" name="quiz-trading-basics-0" value="1"><span>A guaranteed fill</span></label><label><input type="radio" name="quiz-trading-basics-0" value="2"><span>Unlimited exposure</span></label></div></fieldset><fieldset class="quiz-question" data-answer="0"><legend><span>02</span>What belongs in a trading plan?</legend><div class="quiz-options"><label><input type="radio" name="quiz-trading-basics-1" value="0"><span>Entry, invalidation and size</span></label><label><input type="radio" name="quiz-trading-basics-1" value="1"><span>Only a ticker</span></label><label><input type="radio" name="quiz-trading-basics-1" value="2"><span>A promise of profit</span></label></div></fieldset><fieldset class="quiz-question" data-answer="0"><legend><span>03</span>What is slippage?</legend><div class="quiz-options"><label><input type="radio" name="quiz-trading-basics-2" value="0"><span>Expected versus actual execution difference</span></label><label><input type="radio" name="quiz-trading-basics-2" value="1"><span>A dividend date</span></label><label><input type="radio" name="quiz-trading-basics-2" value="2"><span>A wallet backup</span></label></div></fieldset></div><button class="button outline" type="button" data-quiz-submit>Check answers <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></button></section><section class="sources-section section-rule"><div class="section-kicker">Primary references</div><h2>Continue with original sources.</h2><p>These links provide definitions and current context. Product rules, regulation and network details can change, so verify time-sensitive information at the source.</p><ul><li><a href="https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/types-orders" target="_blank" rel="noopener noreferrer">Investor.gov order types <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6"/><path d="m19 5-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li><li><a href="https://www.finra.org/investors/investing/investing-basics" target="_blank" rel="noopener noreferrer">FINRA investing basics <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5h6v6"/><path d="m19 5-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a></li></ul></section><aside class="author-card compact"><img class="author-avatar" src="/assets/images/umar-farooq.jpeg" width="88" height="88" loading="lazy" alt="Umar Farooq, CryptoStocks Academy author"><div><span class="section-kicker">Written by</span><h2><a href="/authors/umar-farooq/">Umar Farooq</a></h2><p>Founder and educational content author.</p><a class="text-link" href="/authors/umar-farooq/">Author profile <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a></div></aside>
+  <section class="faq-section section-rule">
+    <div class="section-kicker">Common questions</div>
+    <h2>Before you move on</h2>
+    <div class="faq-list"><details><summary>What is the difference between investing and trading?<span>+</span></summary><p>The terms can overlap, but investing often refers to a longer ownership horizon while trading usually emphasises shorter-term decisions and execution. Both still involve risk.</p></details><details><summary>Why did my order fill at a different price?<span>+</span></summary><p>Market movement, spread, liquidity and slippage can produce a different execution price. Read the venue’s execution policy.</p></details><details><summary>How many rules should a beginner have?<span>+</span></summary><p>Start with a small set you can follow consistently. A short, measurable plan is more useful than a long list you never review.</p></details></div>
+  </section><section class="related section-rule"><div class="section-kicker">Keep exploring</div><div class="related-grid"><a class="related-card" href="/learn/market-orders-and-limit-orders/"><span class="tag">Foundations</span><h3>Market order vs limit order: a clear beginner comparison</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a><a class="related-card" href="/learn/risk-management/"><span class="tag">Risk</span><h3>Risk management in trading: cash risk, stops and exposure</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a><a class="related-card" href="/learn/trading-journal/"><span class="tag">Process</span><h3>How to keep a trading journal that teaches you something</h3><span class="text-link">Open guide <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></span></a></div></section></article><aside class="lesson-aside"><div class="aside-card sticky"><div class="section-kicker">On this page</div><ol><li><span>01</span><a href="#an-order-is-an-instruction-with-trade-offs">An order is an instruction with trade-offs</a></li><li><span>02</span><a href="#a-setup-is-not-a-prediction">A setup is not a prediction</a></li><li><span>03</span><a href="#your-first-trading-plan-can-fit-on-one-page">Your first trading plan can fit on one page</a></li></ol><a class="aside-action" href="/practice/paper-trading/">Practise the process <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"/><path d="m13 6 6 6-6 6"/></svg></a></div><div class="aside-card aside-note"><span class="aside-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 19 6v5c0 4.3-2.9 7.7-7 10-4.1-2.3-7-5.7-7-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><strong>Educational only</strong><p>This page explains concepts. It does not provide personalised advice, live signals or a guaranteed outcome.</p></div></aside></div></section></main>
+    
+    <aside class="adsterra-placement adsterra-native" aria-label="Advertisement">
+      <p class="adsterra-label">Advertisement</p>
+      <script async="async" data-cfasync="false" src="https://bauval.org/21/df792c9c1053373ae8a825a6a1678409"></script>
+      <div id="container-df792c9c1053373ae8a825a6a1678409"></div>
+    </aside>
+    
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="CryptoStocks Academy home">
+          <span class="brand-mark"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.2"/><path d="m14.8 9.2-1.7 3.9-3.9 1.7 1.7-3.9Z"/></svg></span>
+          <span class="brand-type"><strong>CryptoStocks</strong><small>ACADEMY</small></span>
+        </a>
+        <p>Clearer market education for curious beginners. Crypto, forex and stocks—one calm lesson at a time.</p>
+      </div>
+      <div class="footer-column"><span class="footer-label">Explore</span><a href="/careers/">Careers · We are hiring</a><a href="/learn/">Learning hub</a><a href="/tools/">Calculators</a><a href="/practice/paper-trading/">Paper trading</a></div>
+      <div class="footer-column"><span class="footer-label">Trust</span><a href="/about/">About</a><a href="/authors/umar-farooq/">Author</a><a href="/editorial-policy/">Editorial policy</a><a href="/data-sources/">Data sources</a><a href="/corrections-updates/">Corrections &amp; updates</a></div>
+      <div class="footer-column"><span class="footer-label">Legal</span><a href="/risk-disclosure/">Risk disclosure</a><a href="/privacy/">Privacy</a><button class="footer-link-button" type="button" data-open-privacy>Privacy choices</button><a href="/terms/">Terms</a><a href="/contact/">Contact</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 CryptoStocks Academy · Founded by Umar Farooq</span><span>Educational content only · No live trading or custody</span></div>
+  </footer>
+    <section class="privacy-banner" data-privacy-banner hidden role="dialog" aria-labelledby="privacy-choice-title" aria-describedby="privacy-choice-copy">
+      <div class="privacy-banner-copy">
+        <span class="section-kicker">Privacy choice</span>
+        <h2 id="privacy-choice-title">Help improve the learning experience?</h2>
+        <p id="privacy-choice-copy">With your permission, CryptoStocks Academy uses Google Analytics to understand visits and improve pages. Calculator inputs and paper trades stay in your browser. You can change this choice later in the footer. This choice controls Google Analytics only; third-party advertising loads separately. <a href="/privacy/">Read the privacy notice</a>.</p>
+      </div>
+      <div class="privacy-actions">
+        <button class="button outline" type="button" data-privacy-decline>Continue without analytics</button>
+        <button class="button solid" type="button" data-privacy-accept>Allow analytics</button>
+      </div>
+    </section>
+    <script src="/assets/app.js" defer></script>
+    
+    
+    <script data-cfasync="false" src="https://abscloud.org/1/8beb8b010351f380e18548c507f08c28"></script>
+    <script data-cfasync="false" src="https://bauval.org/14/32f63a31f6cfcf8273b55119cdce3329"></script>
+  </body>
+</html>
