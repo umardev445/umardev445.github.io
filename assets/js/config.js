@@ -8,7 +8,7 @@ window.QURANCREST_CONFIG = {
   contactEmail: "umarfarooq360official@gmail.com",
   formEndpoint: "https://formspree.io/f/mqerrdqj",
   contactFormEndpoint: "https://formspree.io/f/mqerrdqj",
-  gaMeasurementId: "",
+  gaMeasurementId: "G-YHGY8HMZP8",
   googleAdsId: "",
   googleAdsConversionLabel: ""
 };
